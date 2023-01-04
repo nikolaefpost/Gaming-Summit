@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 // import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import {russia, estonia, usa} from "../../../assets/icon/navbar"
+
 import { INavData } from "@/../types";
 
 // import { BiChevronDown } from "react-icons/bi";
@@ -11,6 +11,7 @@ import {
   globeIcon,
   menuIcon,
 } from "../../../assets/icon/landing";
+import { estonia, russia, usa } from "../../../assets/icon/navbar";
 import { useLanguage } from "../../../context";
 import styles from "../../../styles/componentsStyle/landing/Navbar.module.scss";
 import MobilMenu from "../MobilMenu";
@@ -23,7 +24,7 @@ interface INavbar {
 
 const Navbar: React.FC<INavbar> = ({ label }) => {
   const { text, onChangeLang, lang } = useLanguage();
-  console.log(lang)
+  console.log(lang);
   // console.log(lang)
   // const {data: session} = useSession();
   const navData: INavData[] = [
@@ -62,10 +63,10 @@ const Navbar: React.FC<INavbar> = ({ label }) => {
   ];
 
   const lang_label = [
-    {label: "Russia", icon: russia, value: "Rus"},
-    {label: "Estonia", icon: estonia, value: "Est"},
-    {label: "USA", icon: usa, value: "Eng"},
-  ]
+    { label: "Russia", icon: russia, value: "Rus" },
+    { label: "Estonia", icon: estonia, value: "Est" },
+    { label: "USA", icon: usa, value: "Eng" },
+  ];
 
   const [navItem, setNavItem] = useState<INavData[]>(navData);
   const [isOpen, setIsOpen] = useState(false);
@@ -76,13 +77,12 @@ const Navbar: React.FC<INavbar> = ({ label }) => {
   }, [text]);
 
   const onLanguage = (l: string): void => {
-
     onChangeLang(l);
     setIsLangOpen(false);
   };
 
   const onOpen = (): void => {
-    setIsLangOpen(pre=>!pre)
+    setIsLangOpen((pre) => !pre);
   };
 
   const onClose = (): void => {
@@ -154,14 +154,20 @@ const Navbar: React.FC<INavbar> = ({ label }) => {
           <Image src={globeIcon as string} width={24} height={24} />
           {/* <BiChevronDown /> */}
         </div>
-        {isLangOpen && <div className={styles.modal_language}>
-          {lang_label.map(item => (
-            <div key={item.label} className={styles.items} onClick={()=>onLanguage(item.value)}>
-              <Image src={item.icon as string} alt="country"/>
-              <div className={styles.label}>{item.label}</div>
-            </div>
-          ))}
-        </div>}
+        {isLangOpen && (
+          <div className={styles.modal_language}>
+            {lang_label.map((item) => (
+              <div
+                key={item.label}
+                className={styles.items}
+                onClick={() => onLanguage(item.value)}
+              >
+                <Image src={item.icon as string} alt="country" />
+                <div className={styles.label}>{item.label}</div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </header>
   );

@@ -1,16 +1,17 @@
 import classNames from "classnames";
+import className from "classnames";
 import { GetStaticProps, NextPage } from "next";
 import Image from "next/image";
 import React, { useEffect, useMemo, useState } from "react";
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
-import className from "classnames"
+
 import { NewsSlider } from "@/../components/News";
-import { INewArticle, INewArticleFields } from "@/../contentful";
 
 import { LandingFooter, Navbar } from "../../components";
 import NewsStaticContent from "../../components/News/NewsStaticContent";
+import { INewArticle, INewArticleFields } from "../../contentful";
 import client from "../../contentfulClient/index";
-import {createArray, useMediaQuery} from "../../helpers/useMedia";
+import { createArray, useMediaQuery } from "../../helpers/useMedia";
 import ticket from "../../public/News/news_ticket.png";
 import styles from "../../styles/componentsStyle/News.module.scss";
 
@@ -19,9 +20,8 @@ interface IBlog {
 }
 
 const News: NextPage<IBlog> = ({ blogs }) => {
-
   const isMobile = useMediaQuery(500);
-  const visibleItems = isMobile? 1 : 6;
+  const visibleItems = isMobile ? 1 : 6;
   const [shiftIndex, setShiftIndex] = useState<number>(0);
   const [slides, setSlides] = useState<INewArticle[]>(
     blogs.slice(0, visibleItems),
@@ -49,7 +49,7 @@ const News: NextPage<IBlog> = ({ blogs }) => {
     [visibleItems, blogs],
   );
 
-  const totalPagination2 = [-2, -1 , 0 ,1 ,2]
+  const totalPagination2 = [-2, -1, 0, 1, 2];
   const label = "news";
   return (
     <div className={styles.wrapper}>
@@ -114,13 +114,19 @@ const News: NextPage<IBlog> = ({ blogs }) => {
             </button>
           </div>
           <div className={styles.slider_control_mobile}>
-            {totalPagination2.map((item)=>(
-              (item + shiftIndex) >= 0 && (item + shiftIndex) < blogs.length && <div
-                className={className(styles.items, {[styles.active]:item===0})}
-                key={item}
-                onClick={()=>setShiftIndex(pre=>pre+item)}
-              />
-            ))}
+            {totalPagination2.map(
+              (item) =>
+                item + shiftIndex >= 0 &&
+                item + shiftIndex < blogs.length && (
+                  <div
+                    className={className(styles.items, {
+                      [styles.active]: item === 0,
+                    })}
+                    key={item}
+                    onClick={() => setShiftIndex((pre) => pre + item)}
+                  />
+                ),
+            )}
           </div>
         </div>
       </div>

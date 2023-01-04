@@ -6,12 +6,10 @@ import React, {
   useMemo,
   useState,
 } from "react";
+
 import { IText } from "../types";
 
-
-
-
-import { EngData, EstData, RusData} from "./languageContext.data";
+import { EngData, EstData, RusData } from "./languageContext.data";
 
 interface LanguageContextType {
   text: IText;
@@ -23,18 +21,17 @@ const LanguageContext = createContext<LanguageContextType>(
   {} as LanguageContextType,
 );
 
-
-const LanguageProvider: React.FC<React.PropsWithChildren<unknown>> = ({ children }) => {
+const LanguageProvider: React.FC<React.PropsWithChildren<unknown>> = ({
+  children,
+}) => {
   const [lang, setLang] = useState<string>("Eng");
   const [text, setText] = useState<IText>({});
 
   const onChangeLang = (language: string): void => {
-
     setLang(language);
   };
 
   const getLanguage = useCallback(() => {
-
     switch (lang) {
       case "Eng":
         setText(EngData);
@@ -65,7 +62,7 @@ const LanguageProvider: React.FC<React.PropsWithChildren<unknown>> = ({ children
   return (
     <LanguageContext.Provider value={value}>
       {children}
-      </LanguageContext.Provider>
+    </LanguageContext.Provider>
   );
 };
 

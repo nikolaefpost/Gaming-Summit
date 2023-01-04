@@ -1,13 +1,13 @@
 @import "styles/mixins";
 @import "styles/colors";
 
-.menu{
+.menu {
   width: 100%;
   height: 100%;
   position: relative;
   z-index: 1002;
 
-  & .smoke1{
+  & .smoke1 {
     position: absolute;
     width: 725px;
     height: 365px;
@@ -20,7 +20,7 @@
     z-index: 1003;
   }
 
-  & .smoke2{
+  & .smoke2 {
     position: absolute;
     width: calc(100% + 18px);
     height: 315px;
@@ -32,7 +32,7 @@
     z-index: 1003;
   }
 
-  & .red_spots1{
+  & .red_spots1 {
     position: absolute;
     width: 100%;
     height: 240px;
@@ -46,7 +46,7 @@
     z-index: 1002;
   }
 
-  & .red_spots2{
+  & .red_spots2 {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -60,20 +60,25 @@
     z-index: 1002;
   }
 
-  & .background{
+  & .background {
     position: absolute;
     width: 500px;
     height: 1000px;
     //left: 0;
     //bottom: 0;
-    background-image: linear-gradient(0deg, rgba(10, 17, 87, 0.83), rgba(10, 17, 87, 0.83)), url("../../../public/background2.png");
+    background-image: linear-gradient(
+        0deg,
+        rgba(10, 17, 87, 0.83),
+        rgba(10, 17, 87, 0.83)
+      ),
+      url("../../../public/background2.png");
     mix-blend-mode: hard-light;
     //background-size: cover;
     background-position: 55% 0;
     z-index: 1001;
   }
 
-  & .red_shadow{
+  & .red_shadow {
     position: absolute;
     width: 558px;
     height: 528px;
@@ -82,26 +87,26 @@
     opacity: 0.4;
     filter: blur(500px);
     z-index: 1001;
-    background: #FE3F8E;
+    background: #fe3f8e;
   }
 
-  & .close{
+  & .close {
     position: absolute;
     @include fonts(600, 18px, 25px, white);
-    @include display-flex(flex-start );
+    @include display-flex(flex-start);
     gap: 3px;
     top: 25px;
     right: 29px;
     z-index: 1006;
     text-transform: uppercase;
 
-    & svg{
+    & svg {
       width: 30px;
       height: 30px;
     }
   }
 
-  & .block_links{
+  & .block_links {
     width: 100%;
     height: 44%;
     margin: 0 29px;
@@ -109,23 +114,22 @@
     position: relative;
     z-index: 1005;
 
-    & .links{
+    & .links {
       @include display-flex(flex-start, flex-start);
       flex-direction: column;
       margin-left: 9px;
       gap: 15px;
       cursor: pointer;
 
-      & .link{
+      & .link {
         position: relative;
         height: 32px;
         padding-bottom: 7px;
-        transition: opacity .5s ease-out;
+        transition: opacity 0.5s ease-out;
 
-
-        & a{
+        & a {
           all: unset;
-          @include fonts(700, 20px, 20px, #FFFFFF);
+          @include fonts(700, 20px, 20px, #ffffff);
           letter-spacing: 0.04em;
           margin-right: 30px;
           text-transform: uppercase;
@@ -133,11 +137,11 @@
           padding-top: 4px;
         }
 
-        &:hover > .line{
+        &:hover > .line {
           opacity: 1;
         }
 
-        & .line{
+        & .line {
           opacity: 0;
           position: absolute;
           height: 3px;
@@ -147,8 +151,7 @@
           background: $hot_pink;
           transition: opacity 1s ease-out;
 
-
-          &:after{
+          &:after {
             content: "";
             position: absolute;
             width: 3px;
@@ -158,7 +161,7 @@
             right: -5px;
           }
 
-          &:before{
+          &:before {
             content: "";
             position: absolute;
             width: 3px;
@@ -168,22 +171,19 @@
             right: -9px;
           }
 
-          &:before{
+          &:before {
             right: -9px;
           }
         }
       }
 
-      & .link:last-child{
+      & .link:last-child {
         margin-right: 0;
       }
     }
-
-
-
   }
 
-  & .line{
+  & .line {
     position: relative;
     z-index: 1005;
     width: calc(100% - 58px);
@@ -192,79 +192,75 @@
     background: rgba(255, 255, 255, 0.3);
   }
 
-  & .footer{
+  & .footer {
     position: relative;
     z-index: 1005;
     width: 100%;
     height: 46%;
     padding: 29px 29px 43px;
 
-    & .ticket{
+    & .ticket {
       @include display-flex(space-between);
 
-      & h2{
+      & h2 {
         width: 174px;
-        @include fonts(700, 18px, 24px, #FFFFFF);
+        @include fonts(700, 18px, 24px, #ffffff);
       }
 
-      & a{
+      & a {
         width: 129px;
         height: 41px;
-        background: #FE3F8E;
-        border: 1px solid #FE3F8E;
+        background: #fe3f8e;
+        border: 1px solid #fe3f8e;
         border-radius: 8px;
         @include display-flex;
-        @include fonts(500, 15px, 26px, #FFFFFF);
+        @include fonts(500, 15px, 26px, #ffffff);
         cursor: pointer;
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
 
-        &:hover{
+        &:hover {
           transform: scale(1.1);
         }
       }
-
-
     }
 
-    & .support{
+    & .support {
       margin-top: 60px;
 
-      & h2{
-        @include fonts(700, 18px, 24px, #FFFFFF);
+      & h2 {
+        @include fonts(700, 18px, 24px, #ffffff);
         margin-bottom: 8px;
       }
 
-      & a{
+      & a {
         @include fonts(500, 16px, 19px, rgba(255, 255, 255, 0.6));
         cursor: pointer;
       }
     }
 
-    & .priority{
+    & .priority {
       margin-top: 60px;
 
-      & h2{
-        @include fonts(700, 18px, 27px, #FFFFFF);
+      & h2 {
+        @include fonts(700, 18px, 27px, #ffffff);
         width: 249px;
       }
 
-      & .social{
+      & .social {
         margin-top: 20px;
         @include display-flex(flex-start);
         gap: 13px;
 
-        & .item{
+        & .item {
           width: 45px;
           height: 45px;
           border-radius: 50%;
-          background: #FFFFFF;
+          background: #ffffff;
           box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
           @include display-flex;
           cursor: pointer;
         }
       }
-
     }
-
   }
 }

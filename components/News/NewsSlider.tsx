@@ -1,9 +1,10 @@
 import dayjs from "dayjs";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import { AnimatePresence, motion } from "framer-motion";
+
 import { INewsSlider } from "@/../types";
 
 import { useLanguage } from "../../context";
@@ -18,8 +19,8 @@ const NewsSlider: React.FC<INewsSlider> = ({ slides }) => {
         <motion.div
           className={styles.card}
           key={item.fields.slug}
-          initial={{ opacity: 0}}
-          animate={{ opacity: 1}}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={transition}
         >
           <div
@@ -62,7 +63,7 @@ const NewsSlider: React.FC<INewsSlider> = ({ slides }) => {
           </div>
         </motion.div>
       ))}
-      </AnimatePresence>
+    </AnimatePresence>
   );
 };
 

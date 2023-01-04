@@ -10,7 +10,7 @@
   z-index: 20;
   padding: 0 95px;
 
-  & .smoke4{
+  & .smoke4 {
     position: absolute;
     width: 1026px;
     height: 446px;
@@ -20,13 +20,13 @@
     z-index: 21;
     background-image: url("../../../public/smoke.png");
     mix-blend-mode: hard-light;
-    opacity: .1;
+    opacity: 0.1;
     background-position: left top;
     background-repeat: no-repeat;
     transform: rotate(-173.75deg);
   }
 
-  & .smoke5{
+  & .smoke5 {
     position: absolute;
     width: 1026px;
     height: 446px;
@@ -36,12 +36,12 @@
     z-index: 21;
     background-image: url("../../../public/smoke.png");
     mix-blend-mode: hard-light;
-    opacity: .1;
+    opacity: 0.1;
     background-position: left top;
     background-repeat: no-repeat;
   }
 
-  & .smoke6{
+  & .smoke6 {
     position: absolute;
     width: 1026px;
     height: 446px;
@@ -51,13 +51,13 @@
     z-index: 21;
     background-image: url("../../../public/smoke.png");
     mix-blend-mode: hard-light;
-    opacity: .1;
+    opacity: 0.1;
     background-position: left top;
     background-repeat: no-repeat;
     transform: rotate(-178.54deg);
   }
 
-  & .smoke7{
+  & .smoke7 {
     position: absolute;
     width: 1026px;
     height: 446px;
@@ -67,12 +67,12 @@
     z-index: 21;
     background-image: url("../../../public/smoke.png");
     mix-blend-mode: hard-light;
-    opacity: .1;
+    opacity: 0.1;
     background-position: left top;
     background-repeat: no-repeat;
   }
 
-  & .smoke8{
+  & .smoke8 {
     position: absolute;
     width: 1026px;
     height: 446px;
@@ -82,13 +82,13 @@
     z-index: 21;
     background-image: url("../../../public/smoke.png");
     mix-blend-mode: hard-light;
-    opacity: .1;
+    opacity: 0.1;
     background-position: left top;
     background-repeat: no-repeat;
     transform: rotate(-178.54deg);
   }
 
-  & .smoke9{
+  & .smoke9 {
     position: absolute;
     width: 1026px;
     height: 446px;
@@ -98,13 +98,13 @@
     z-index: 21;
     background-image: url("../../../public/smoke.png");
     mix-blend-mode: hard-light;
-    opacity: .1;
+    opacity: 0.1;
     background-position: left top;
     background-repeat: no-repeat;
     transform: rotate(-178.54deg);
   }
 
-  & .meet_team{
+  & .meet_team {
     position: absolute;
     width: 2924px;
     height: 223px;
@@ -117,7 +117,7 @@
     z-index: 22;
   }
 
-  & .grand_event{
+  & .grand_event {
     position: absolute;
     width: 2660px;
     height: 223px;
@@ -130,7 +130,7 @@
     z-index: 23;
   }
 
-  & .place{
+  & .place {
     position: absolute;
     width: 1245px;
     height: 1094px;
@@ -138,13 +138,18 @@
     right: 0;
     background-size: 100%;
     z-index: 22;
-    background-image:  linear-gradient(0deg, rgba(10, 17, 87, 0.4), rgba(10, 17, 87, 0.4)), url("../../../public/place2.png");
+    background-image: linear-gradient(
+        0deg,
+        rgba(10, 17, 87, 0.4),
+        rgba(10, 17, 87, 0.4)
+      ),
+      url("../../../public/place2.png");
     background-position: left top;
     background-repeat: no-repeat;
     mix-blend-mode: lighten;
   }
 
-  & .assassin{
+  & .assassin {
     position: absolute;
     width: 1060px;
     height: 901px;
@@ -152,13 +157,24 @@
     left: -33px;
     background-size: cover;
     z-index: 25;
-    background-image: linear-gradient(180deg, rgba(11, 18, 88, 0.28) 0%, rgba(10, 17, 87, 0.71) 71.68%, #0A1157 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../public/assassin.png");
+    background-image: linear-gradient(
+        180deg,
+        rgba(11, 18, 88, 0.28) 0%,
+        rgba(10, 17, 87, 0.71) 71.68%,
+        #0a1157 100%
+      ),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url("../../../public/assassin.png");
     background-position: 0 0;
     background-repeat: no-repeat;
     mix-blend-mode: lighten;
     //opacity: .99;
 
-    & .shadow{
+    & .shadow {
       position: absolute;
       width: 523px;
       height: 378px;
@@ -168,10 +184,9 @@
       background-position: center;
       background-size: cover;
     }
-
   }
 
-  & .content{
+  & .content {
     max-width: 1410px;
     margin: 0 auto;
     padding: 293px 22px 201px 0;
@@ -180,25 +195,25 @@
     position: relative;
     z-index: 25;
 
-    & span{
+    & span {
       @include fonts(400, 17px, 17px, $accent);
       letter-spacing: 3px;
       text-transform: uppercase;
     }
 
-    & h2{
+    & h2 {
       margin-top: 19px;
       width: 380px;
       @include fonts(400, 62px, 71px, $accent);
     }
-    & h3{
+    & h3 {
       @include fonts(400, 62px, 71px, $midday_sun);
     }
 
-    & p{
+    & p {
       margin-top: 23px;
       width: 441px;
-      @include fonts(500, 20px, 33px,  rgba(255, 255, 255, 0.6));
+      @include fonts(500, 20px, 33px, rgba(255, 255, 255, 0.6));
     }
 
     //& .partners{
@@ -334,33 +349,33 @@
     //  }
     //}
 
-    & .enjoy{
+    & .enjoy {
       margin-top: 449px;
-      @include display-flex(flex-start, center );
+      @include display-flex(flex-start, center);
       flex-direction: column;
       width: 100%;
 
-      & h2{
+      & h2 {
         @include fonts(500, 76px, 101px, white);
         display: block;
         width: 830px;
         text-align: center;
         font-family: Futura, sans-serif;
 
-        & span{
+        & span {
           @include fonts(500, 76px, 101px, $midday_sun);
           text-transform: uppercase;
         }
       }
 
-      & p{
+      & p {
         margin-top: 29px;
         width: 678px;
         @include fonts(500, 28px, 47px, rgba(255, 255, 255, 0.6));
         text-align: center;
       }
 
-      & a{
+      & a {
         margin-top: 24px;
         width: 280px;
         height: 65px;
@@ -370,18 +385,16 @@
         @include display-flex;
         @include fonts(500, 23px, 26px, white);
         letter-spacing: 0.42px;
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
 
-        &:hover{
+        &:hover {
           transform: scale(1.1);
         }
       }
-
-
     }
   }
 
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 500px) {
     height: auto;
     display: block;
     background: $background-color;
@@ -390,7 +403,7 @@
     z-index: 20;
     padding: 0 29px;
 
-    & .smoke4{
+    & .smoke4 {
       position: absolute;
       width: 1026px;
       height: 446px;
@@ -400,13 +413,13 @@
       z-index: 21;
       background-image: url("../../../public/smoke.png");
       mix-blend-mode: hard-light;
-      opacity: .1;
+      opacity: 0.1;
       background-position: left top;
       background-repeat: no-repeat;
       transform: rotate(-173.75deg);
     }
 
-    & .smoke5{
+    & .smoke5 {
       position: absolute;
       width: 1026px;
       height: 446px;
@@ -416,13 +429,13 @@
       z-index: 21;
       background-image: url("../../../public/smoke.png");
       mix-blend-mode: hard-light;
-      opacity: .1;
+      opacity: 0.1;
       background-position: left top;
       background-repeat: no-repeat;
       transform: rotate(141.08deg);
     }
 
-    & .smoke6{
+    & .smoke6 {
       position: absolute;
       width: 1026px;
       height: 446px;
@@ -432,13 +445,13 @@
       z-index: 21;
       background-image: url("../../../public/smoke.png");
       mix-blend-mode: hard-light;
-      opacity: .1;
+      opacity: 0.1;
       background-position: left top;
       background-repeat: no-repeat;
       transform: rotate(-178.54deg);
     }
 
-    & .smoke7{
+    & .smoke7 {
       position: absolute;
       width: 1026px;
       height: 446px;
@@ -448,12 +461,12 @@
       z-index: 21;
       background-image: url("../../../public/smoke.png");
       mix-blend-mode: hard-light;
-      opacity: .1;
+      opacity: 0.1;
       background-position: left top;
       background-repeat: no-repeat;
     }
 
-    & .smoke8{
+    & .smoke8 {
       position: absolute;
       width: 1026px;
       height: 446px;
@@ -463,13 +476,13 @@
       z-index: 21;
       background-image: url("../../../public/smoke.png");
       mix-blend-mode: hard-light;
-      opacity: .1;
+      opacity: 0.1;
       background-position: left top;
       background-repeat: no-repeat;
       transform: rotate(-178.54deg);
     }
 
-    & .smoke9{
+    & .smoke9 {
       position: absolute;
       width: 1026px;
       height: 446px;
@@ -479,21 +492,21 @@
       z-index: 21;
       background-image: url("../../../public/smoke.png");
       mix-blend-mode: hard-light;
-      opacity: .1;
+      opacity: 0.1;
       background-position: left top;
       background-repeat: no-repeat;
       transform: rotate(-178.54deg);
     }
 
-    & .meet_team{
+    & .meet_team {
       display: none;
     }
 
-    & .grand_event{
+    & .grand_event {
       display: none;
     }
 
-    & .place{
+    & .place {
       position: absolute;
       width: 970px;
       height: 852px;
@@ -502,13 +515,18 @@
       left: -207px;
       background-size: 100%;
       z-index: 22;
-      background-image:linear-gradient(0deg, rgba(10, 17, 87, 0.4), rgba(10, 17, 87, 0.4)), url("../../../public/place2.png");
+      background-image: linear-gradient(
+          0deg,
+          rgba(10, 17, 87, 0.4),
+          rgba(10, 17, 87, 0.4)
+        ),
+        url("../../../public/place2.png");
       background-position: left top;
       background-repeat: no-repeat;
       mix-blend-mode: lighten;
     }
 
-    & .assassin{
+    & .assassin {
       position: absolute;
       width: 1060px;
       height: 1081px;
@@ -516,13 +534,24 @@
       left: -322px;
       background-size: cover;
       z-index: 24;
-      background-image: linear-gradient(180deg, rgba(11, 18, 88, 0.28) 0%, rgba(10, 17, 87, 0.71) 71.68%, #0A1157 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../public/assassin.png");
+      background-image: linear-gradient(
+          180deg,
+          rgba(11, 18, 88, 0.28) 0%,
+          rgba(10, 17, 87, 0.71) 71.68%,
+          #0a1157 100%
+        ),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url("../../../public/assassin.png");
       background-position: center;
       background-repeat: no-repeat;
       mix-blend-mode: lighten;
-      opacity: .99;
+      opacity: 0.99;
 
-      & .shadow{
+      & .shadow {
         position: absolute;
         width: 523px;
         height: 378px;
@@ -532,21 +561,20 @@
         background-position: center;
         background-size: cover;
       }
-
     }
 
-    & .content{
+    & .content {
       width: 100%;
       margin: 0 auto;
       padding: 111px 28px 143px 28px;
       @include display-flex(flex-start, flex-start);
       flex-direction: column;
 
-      & span{
+      & span {
         @include fonts(400, 12px, 17px, $accent);
       }
 
-      & h2{
+      & h2 {
         margin-top: 5px;
         display: block;
         width: 155px;
@@ -554,68 +582,68 @@
         letter-spacing: 2.39628px;
         text-transform: uppercase;
 
-        & span{
+        & span {
           @include fonts(400, 32px, 43px, $midday_sun);
         }
       }
 
-      & p{
+      & p {
         margin-top: 23px;
         width: 100%;
-        @include fonts(500, 16px, 33px,  rgba(255, 255, 255, 0.6));
+        @include fonts(500, 16px, 33px, rgba(255, 255, 255, 0.6));
       }
 
-      & .partners{
+      & .partners {
         width: 100%;
         margin-top: 779px;
         @include display-flex(center, flex-start);
         flex-direction: column;
         gap: 142px;
 
-        & .left{
+        & .left {
           padding-top: 0;
           width: 100%;
           @include display-flex(flex-start, flex-start);
           flex-direction: column;
 
-          & span{
-            @include fonts(400, 12px, 17px,  $accent);
+          & span {
+            @include fonts(400, 12px, 17px, $accent);
             margin-left: 3px;
           }
 
-          & h2{
+          & h2 {
             margin-top: -8px;
-            @include fonts(500, 32px, 69px,  white);
+            @include fonts(500, 32px, 69px, white);
 
-            & span{
-              @include fonts(500, 32px, 69px,  $midday_sun);
+            & span {
+              @include fonts(500, 32px, 69px, $midday_sun);
             }
           }
 
-          & p{
+          & p {
             margin: -11px 0 0 3px;
-            @include fonts(400, 16px, 23px,  rgba(255, 255, 255, 0.6));
+            @include fonts(400, 16px, 23px, rgba(255, 255, 255, 0.6));
           }
 
-          & .touch{
+          & .touch {
             margin: 207px 0 0 0;
             width: 100%;
             display: block;
 
-            & h4{
-              @include fonts(500, 24px, 28px,  white);
+            & h4 {
+              @include fonts(500, 24px, 28px, white);
               display: block;
               text-align: center;
             }
 
-            & h5{
+            & h5 {
               display: block;
               text-align: center;
               margin-top: 6px;
-              @include fonts(500, 24px, 23px,  white);
+              @include fonts(500, 24px, 23px, white);
             }
 
-            & button{
+            & button {
               margin: 30px auto 0;
               width: 129px;
               height: 41px;
@@ -623,60 +651,60 @@
               border: 1px solid $hot_pink;
               border-radius: 8px;
               @include display-flex;
-              @include fonts(500, 15px, 26px,  white);
+              @include fonts(500, 15px, 26px, white);
               letter-spacing: 0.42px;
             }
           }
         }
 
-        & .right{
+        & .right {
           @include display-flex(flex-start, flex-start);
           flex-direction: column;
           width: 100%;
 
-          & h3{
+          & h3 {
             @include fonts(500, 20px, 28px, white);
             text-transform: uppercase;
             display: block;
           }
 
-          & .main_partner{
+          & .main_partner {
             display: none;
           }
 
-          & .main_partner_mobil{
+          & .main_partner_mobil {
             margin-top: 14px;
             width: 100%;
             height: 73px;
-            background: #232A69;
-            border: 1px solid #FFFFFF;
+            background: #232a69;
+            border: 1px solid #ffffff;
             border-radius: 16px;
             @include display-flex;
             margin-bottom: 44px;
           }
 
-          & .gold_partner{
+          & .gold_partner {
             margin-top: 14px;
             width: 100%;
             @include display-flex;
             gap: 27px;
             margin-bottom: 35px;
 
-            & .item{
+            & .item {
               display: none;
             }
 
-            & .item_mobile{
+            & .item_mobile {
               display: block;
               width: 88px;
               height: 50px;
               border-radius: 16px 16px 0 0;
-              background: #FFDF5C;
+              background: #ffdf5c;
               @include display-flex;
             }
           }
 
-          & .all_partner{
+          & .all_partner {
             margin-top: 14px;
             @include display-flex;
             flex-wrap: wrap;
@@ -685,45 +713,45 @@
             width: 100%;
             height: auto;
 
-            & .item{
+            & .item {
               display: none;
             }
 
-            & .item_mobile{
+            & .item_mobile {
               @include display-flex;
               width: 88px;
               height: 50px;
-              background: #232A69;
+              background: #232a69;
               border-radius: 16px;
             }
           }
         }
       }
 
-      & .enjoy{
+      & .enjoy {
         margin-top: 1118px;
-        @include display-flex(flex-start, center );
+        @include display-flex(flex-start, center);
         flex-direction: column;
         width: 100%;
 
-        & h2{
+        & h2 {
           @include fonts(500, 32px, 42px, white);
           width: 100%;
           text-align: center;
 
-          & span{
+          & span {
             @include fonts(500, 32px, 42px, $midday_sun);
           }
         }
 
-        & p{
+        & p {
           margin-top: 29px;
           width: 100%;
           @include fonts(500, 16px, 23px, rgba(255, 255, 255, 0.6));
           text-align: center;
         }
 
-        & a{
+        & a {
           margin-top: 36px;
           width: 129px;
           height: 41px;

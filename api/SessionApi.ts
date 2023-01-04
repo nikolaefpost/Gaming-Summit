@@ -1,7 +1,6 @@
 import axios, { AxiosRequestConfig } from "axios";
 
-
-const BASE_URL = process.env.SERVER_API as string
+const BASE_URL = process.env.SERVER_API as string;
 
 export default class SessionApi {
   static api = axios.create({

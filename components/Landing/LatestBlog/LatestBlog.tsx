@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-import { ILatestBlog } from "@/../contentful";
-
+import { ILatestBlog } from "../../../contentful";
 import { useLanguage } from "../../../context";
 import styles from "../../../styles/componentsStyle/landing/LatestBlog.module.scss";
 

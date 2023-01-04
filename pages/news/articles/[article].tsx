@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import dayjs from "dayjs";
 import { NextPage } from "next";
 import Head from "next/head";
@@ -5,8 +6,7 @@ import Image from "next/image";
 import { GetStaticPaths, GetStaticProps } from "next/types";
 import React from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
-import classNames from "classnames";
-import { INewArticle, INewArticleFields } from "@/../contentful";
+
 import styles from "@/../styles/componentsStyle/News.module.scss";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
@@ -17,10 +17,11 @@ import {
 } from "../../../assets/icon/News";
 import { LandingFooter, Navbar } from "../../../components";
 import NewsStaticContent from "../../../components/News/NewsStaticContent";
+import { INewArticle, INewArticleFields } from "../../../contentful";
 import client from "../../../contentfulClient/index";
 import { useLanguage } from "../../../context";
+import { useMediaQuery } from "../../../helpers/useMedia";
 import ticket from "../../../public/News/news_ticket.png";
-import {useMediaQuery} from "../../../helpers/useMedia";
 
 interface IArticle {
   data: INewArticle;
@@ -60,7 +61,9 @@ const Article: NextPage<IArticle> = ({ data }) => {
             <main>
               <a
                 href="https://fienta.com/talinn-gaming-summit-2022"
-                className={classNames(styles.ticket_block, {[styles.order]:isMobile})}
+                className={classNames(styles.ticket_block, {
+                  [styles.order]: isMobile,
+                })}
               >
                 <Image src={ticket} layout="responsive" />
               </a>

@@ -6,9 +6,14 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import instagram from "../../../assets/icon/landing/instagramIcon.svg";
 import { useLanguage } from "../../../context";
-import { cardImage2, cardImage4, cardImage5, cardImage1_1, cardImage3_1 } from "../../../public/CardImg";
+import {
+  cardImage1_1,
+  cardImage2,
+  cardImage3_1,
+  cardImage4,
+  cardImage5,
+} from "../../../public/CardImg";
 import styles from "../../../styles/componentsStyle/landing/Speakers.module.scss";
-
 
 const Speakers: NextPage = () => {
   const { text } = useLanguage();

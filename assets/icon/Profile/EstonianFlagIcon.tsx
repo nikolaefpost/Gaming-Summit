@@ -1,7 +1,8 @@
-import React from 'react';
-import {IIcon} from "../../../types";
+import React from "react";
 
-const EstonianFlagIcon: React.FC<IIcon> = ({className}) => {
+import { IIcon } from "../../../types";
+
+const EstonianFlagIcon: React.FC<IIcon> = ({ className }) => {
   return (
     <svg
       className={className}

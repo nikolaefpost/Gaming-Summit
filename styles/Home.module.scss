@@ -1,36 +1,35 @@
 @import "mixins";
 @import "colors";
 
-.content{
+.content {
   width: 100%;
   height: auto;
   position: relative;
   background: $background-color;
   overflow: hidden;
 
-
-
-  & .ellipse1, .ellipse2{
+  & .ellipse1,
+  .ellipse2 {
     position: absolute;
     width: 558px;
     height: 528.74px;
-    background: rgba(254, 63, 142, .4);
+    background: rgba(254, 63, 142, 0.4);
     filter: blur(500px);
     z-index: 3;
   }
 
-  & .ellipse1{
+  & .ellipse1 {
     left: -193px;
     top: 354.39px;
   }
 
-  & .ellipse2{
+  & .ellipse2 {
     //right: -194px;
     left: 1236px;
     top: 147.82px;
   }
 
-  & .red_spots{
+  & .red_spots {
     position: absolute;
     width: 1318px;
     height: 1400px;
@@ -40,7 +39,7 @@
     z-index: 3;
   }
 
-  & .white_shadow{
+  & .white_shadow {
     position: absolute;
     width: 1427px;
     height: 1500px;
@@ -48,13 +47,25 @@
     left: -250px;
     background-size: 100%;
     z-index: 3;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(13, 19, 87, 0.29), rgba(13, 19, 87, 0.29)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../public/white_shadow.png");
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      linear-gradient(0deg, rgba(13, 19, 87, 0.29), rgba(13, 19, 87, 0.29)),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url("../public/white_shadow.png");
     mix-blend-mode: lighten;
     background-position: left top;
     background-repeat: no-repeat;
   }
 
-  & .anything_text{
+  & .anything_text {
     position: absolute;
     width: 2600px;
     height: 223px;
@@ -66,7 +77,7 @@
     z-index: 3;
   }
 
-  & .smoke2{
+  & .smoke2 {
     position: absolute;
     width: 1459px;
     height: 757px;
@@ -82,7 +93,7 @@
     background-repeat: no-repeat;
   }
 
-  & .smoke3{
+  & .smoke3 {
     position: absolute;
     width: 1026px;
     height: 446px;
@@ -96,7 +107,7 @@
     background-position: left top;
     background-repeat: no-repeat;
   }
-  & .smoke7{
+  & .smoke7 {
     position: absolute;
     width: 1726px;
     height: 546px;
@@ -106,12 +117,12 @@
     z-index: 41;
     background-image: url("../public/smoke.png");
     mix-blend-mode: hard-light;
-    opacity: .1;
+    opacity: 0.1;
     background-position: 0 65%;
     background-repeat: no-repeat;
   }
 
-  & .smoke8{
+  & .smoke8 {
     position: absolute;
     width: 1726px;
     height: 596px;
@@ -120,12 +131,12 @@
     background-size: cover;
     z-index: 1;
     background-image: url("../public/smoke.png");
-    opacity: .1;
+    opacity: 0.1;
     background-position: 0 65%;
     background-repeat: no-repeat;
   }
 
-  & .smoke9{
+  & .smoke9 {
     position: absolute;
     width: 1026px;
     height: 446px;
@@ -134,12 +145,12 @@
     background-size: cover;
     z-index: 1;
     background-image: url("../public/smoke.png");
-    opacity: .1;
-    background-position:  50% 50%;
+    opacity: 0.1;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
   }
 
-  & .smoke10{
+  & .smoke10 {
     position: absolute;
     width: 1900px;
     height: 844px;
@@ -154,7 +165,7 @@
     z-index: 21;
   }
 
-  & .red_spots_all1{
+  & .red_spots_all1 {
     position: absolute;
     width: 1860px;
     height: 3239px;
@@ -168,18 +179,16 @@
     transform: rotate(-180deg);
   }
 
-
-
-  @media screen and (max-width: 500px){
-
-    & .ellipse1, .ellipse2{
+  @media screen and (max-width: 500px) {
+    & .ellipse1,
+    .ellipse2 {
       position: absolute;
-      background: rgba(254, 63, 142, .4);
+      background: rgba(254, 63, 142, 0.4);
       filter: blur(500px);
       z-index: 4;
     }
 
-    & .ellipse1{
+    & .ellipse1 {
       width: 219px;
       height: 208px;
       left: auto;
@@ -187,14 +196,14 @@
       top: 17px;
     }
 
-    & .ellipse2{
+    & .ellipse2 {
       width: 263px;
       height: 249px;
       left: -75px;
       top: 211px;
     }
 
-    & .red_spots{
+    & .red_spots {
       position: absolute;
       width: 680px;
       height: 964px;
@@ -205,7 +214,7 @@
       z-index: 4;
     }
 
-    & .white_shadow{
+    & .white_shadow {
       position: absolute;
       width: 802px;
       height: 1075px;
@@ -213,13 +222,25 @@
       left: -396px;
       background-size: auto 100%;
       z-index: 4;
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(13, 19, 87, 0.29), rgba(13, 19, 87, 0.29)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../public/white_shadow.png");
+      background-image: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(0deg, rgba(13, 19, 87, 0.29), rgba(13, 19, 87, 0.29)),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url("../public/white_shadow.png");
       mix-blend-mode: lighten;
       background-position: left top;
       background-repeat: no-repeat;
     }
 
-    & .anything_text{
+    & .anything_text {
       position: absolute;
       width: 1169px;
       height: 223px;
@@ -231,7 +252,7 @@
       z-index: 4;
     }
 
-    & .smoke2{
+    & .smoke2 {
       position: absolute;
       width: 1459px;
       height: 757px;
@@ -247,7 +268,7 @@
       background-repeat: no-repeat;
     }
 
-    & .smoke3{
+    & .smoke3 {
       position: absolute;
       width: 1026px;
       height: 446px;
@@ -262,7 +283,7 @@
       background-repeat: no-repeat;
     }
 
-    & .smoke8{
+    & .smoke8 {
       position: absolute;
       width: 1726px;
       height: 596px;
@@ -271,12 +292,12 @@
       background-size: cover;
       z-index: 1;
       background-image: url("../public/smoke.png");
-      opacity: .1;
+      opacity: 0.1;
       background-position: 0 65%;
       background-repeat: no-repeat;
     }
 
-    & .red_spots_all1{
+    & .red_spots_all1 {
       position: absolute;
       width: 100%;
       height: 3239px;
@@ -292,6 +313,6 @@
   }
 }
 
-.img_content{
+.img_content {
   @include display-flex;
 }

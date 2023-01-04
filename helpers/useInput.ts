@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import {ChangeEventType, OutputType, UseSingleImageHook } from "../types";
 
-
+import { ChangeEventType, OutputType, UseSingleImageHook } from "../types";
 
 export const useValidateInput = <T>(
   initialState: T,
@@ -9,7 +8,6 @@ export const useValidateInput = <T>(
 ): OutputType<T> => {
   const [isValid, setIsValid] = useState<boolean>(true);
   const [value, setValue] = useState<T>(initialState);
-
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setValue(() => event.target.value as unknown as T);
@@ -34,11 +32,9 @@ export const useValidateInputEdit = <T>(
   const [isValid, setIsValid] = useState<boolean>(false);
   const [value, setValue] = useState<T>(initialState);
 
-
   const onChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setIsValid(() => callback(event.target.value as unknown as T));
     setValue(() => event.target.value as unknown as T);
-
   };
 
   const onBlur = (): void => {
@@ -49,34 +45,32 @@ export const useValidateInputEdit = <T>(
   //   setIsValid(false);
   // };
 
-  return { value, isValid, onChange,  onBlur };
+  return { value, isValid, onChange, onBlur };
 };
 
-
-export const useInputOne = (
-): OutputType<number | string> => {
+export const useInputOne = (): OutputType<number | string> => {
   const [value, setValue] = useState<number | string>("");
-  const [isValue, setIsValue] = useState(false)
+  const [isValue, setIsValue] = useState(false);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setValue(e.target.value.length > 1 ? e.target.value[0] : e.target.value);
   };
 
   const onBlur = (): void => {
-    if (value && value !== "e") setIsValue(true)
+    if (value && value !== "e") setIsValue(true);
   };
 
   return {
     value,
     onChange,
     onBlur,
-    isValue
+    isValue,
   };
 };
 
 export const useInput = (
   initialValue: number | string,
-  setMatchPassword: (flag:boolean)=>void
+  setMatchPassword: (flag: boolean) => void,
 ): OutputType<number | string> => {
   const [value, setValue] = useState<number | string>(initialValue);
 
@@ -86,7 +80,7 @@ export const useInput = (
   };
 
   const onFocus = (): void => {
-    setMatchPassword(false)
+    setMatchPassword(false);
   };
 
   return {
@@ -113,7 +107,7 @@ export const validatePassword = (password: string): boolean => {
 };
 
 export const validateName = (name: string): boolean => {
-  return name.length >=2;
+  return name.length >= 2;
 };
 
 export const isImageFile = (type: string): boolean => {

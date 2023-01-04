@@ -1,7 +1,7 @@
 @import "styles/mixins";
 @import "styles/colors";
 
-.navbar{
+.navbar {
   position: fixed;
   height: 80px;
   width: 100%;
@@ -11,23 +11,22 @@
   padding: 0 95px;
   z-index: 1000;
 
-  & .mobil_menu{
+  & .mobil_menu {
     display: none;
   }
 
-  & .links{
+  & .links {
     @include display-flex(flex-start);
 
-    & .link{
+    & .link {
       position: relative;
       height: 32px;
       padding-bottom: 7px;
-      transition: opacity .5s ease-out;
+      transition: opacity 0.5s ease-out;
 
-
-      & a{
+      & a {
         all: unset;
-        @include fonts(500, 18px, 25px, #FFFFFF);
+        @include fonts(500, 18px, 25px, #ffffff);
         letter-spacing: 0.04em;
         margin-right: 30px;
         text-transform: uppercase;
@@ -36,12 +35,12 @@
         text-wrap: none;
       }
 
-      &:hover > .line{
+      &:hover > .line {
         //display: block;
         opacity: 1;
       }
 
-      & .line{
+      & .line {
         //display: none;
         opacity: 0;
         position: absolute;
@@ -52,8 +51,7 @@
         background: $hot_pink;
         transition: opacity 1s ease-out;
 
-
-        &:after{
+        &:after {
           content: "";
           position: absolute;
           width: 3px;
@@ -63,7 +61,7 @@
           right: -5px;
         }
 
-        &:before{
+        &:before {
           content: "";
           position: absolute;
           width: 3px;
@@ -73,26 +71,27 @@
           right: -9px;
         }
 
-        &:before{
+        &:before {
           right: -9px;
         }
       }
     }
 
-    & .link:last-child{
+    & .link:last-child {
       margin-right: 0;
     }
   }
 
-  & .menu{
+  & .menu {
     display: none;
   }
 
-  & .right{
+  & .right {
     @include display-flex(flex-start);
     position: relative;
 
-    & a, button{
+    & a,
+    button {
       //width: 154px;
       padding: 0 16px;
       height: 48px;
@@ -100,39 +99,39 @@
       border-radius: 12px;
       border: none;
       @include display-flex;
-      @include fonts(400, 20px, 23px, #FFFFFF);
+      @include fonts(400, 20px, 23px, #ffffff);
       cursor: pointer;
       margin-right: 12px;
 
-      & span{
-        margin-left: 2px!important;
+      & span {
+        margin-left: 2px !important;
       }
     }
 
-    & .user{
-      @include fonts(400, 18px, 27px, #D1CFCF);
+    & .user {
+      @include fonts(400, 18px, 27px, #d1cfcf);
     }
 
-    & .language{
+    & .language {
       margin-left: 26px;
       @include display-flex;
       cursor: pointer;
 
-      & span{
+      & span {
         display: block;
         width: 31px;
         text-align: right;
-        @include fonts(400, 18px, 27px, #D1CFCF);
+        @include fonts(400, 18px, 27px, #d1cfcf);
         margin-right: 6px;
       }
 
-      & svg{
-        color: #D1CFCF;
+      & svg {
+        color: #d1cfcf;
         margin-left: 5px;
       }
     }
 
-    .modal_language{
+    .modal_language {
       position: absolute;
       width: 350px;
       height: 145px;
@@ -155,17 +154,17 @@
         z-index: 1000;
       }
 
-      & .items{
+      & .items {
         width: 100%;
         height: 48px;
         padding: 0 20px;
         @include display-flex(flex-start);
 
-        &:hover{
+        &:hover {
           background: rgba(80, 63, 122, 0.53);
         }
 
-        & .label{
+        & .label {
           margin-left: 12px;
           height: 100%;
           border-bottom: 1px solid #202052;
@@ -174,30 +173,25 @@
           letter-spacing: -0.5px;
         }
 
-        &:first-child{
-          border-radius:  8px 8px 0 0;
+        &:first-child {
+          border-radius: 8px 8px 0 0;
         }
 
-        &:last-child{
+        &:last-child {
           border-radius: 0 0 8px 8px;
         }
-
-
       }
     }
   }
 
-
-
-
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 500px) {
     position: fixed;
     background: transparent;
     box-shadow: none;
     //@include display-flex(flex-start);
     padding: 0 29px;
 
-    & .mobil_menu{
+    & .mobil_menu {
       display: block;
       position: absolute;
       left: 0;
@@ -208,30 +202,31 @@
       z-index: 1001;
     }
 
-    & .links{
+    & .links {
       @include display-flex(flex-start);
 
-      & .link{
+      & .link {
         display: none;
       }
     }
 
-    & button{
+    & button {
       //width: 129px;
       height: 41px;
       border-radius: 8px;
-      @include fonts(500, 15px, 24px, #FFFFFF);
+      @include fonts(500, 15px, 24px, #ffffff);
     }
 
-    & .menu{
+    & .menu {
       display: block;
       cursor: pointer;
     }
 
-    & .right{
+    & .right {
       @include display-flex(flex-start);
 
-      & a, button{
+      & a,
+      button {
         //width: 154px;
         padding: 0 16px;
         height: 32px;
@@ -239,16 +234,16 @@
         border-radius: 12px;
         border: none;
         @include display-flex;
-        @include fonts(400, 12px, 16px, #FFFFFF);
+        @include fonts(400, 12px, 16px, #ffffff);
         cursor: pointer;
         margin-right: 12px;
 
-        & span{
-          margin-left: 2px!important;
+        & span {
+          margin-left: 2px !important;
         }
       }
 
-      .modal_language{
+      .modal_language {
         position: absolute;
         width: 317px;
         height: 145px;
@@ -271,17 +266,17 @@
           z-index: 1000;
         }
 
-        & .items{
+        & .items {
           width: 100%;
           height: 48px;
           padding: 0 20px;
           @include display-flex(flex-start);
 
-          &:hover{
+          &:hover {
             background: rgba(80, 63, 122, 0.53);
           }
 
-          & .label{
+          & .label {
             margin-left: 12px;
             height: 100%;
             border-bottom: 1px solid #202052;
@@ -290,18 +285,15 @@
             letter-spacing: -0.5px;
           }
 
-          &:first-child{
-            border-radius:  8px 8px 0 0;
+          &:first-child {
+            border-radius: 8px 8px 0 0;
           }
 
-          &:last-child{
+          &:last-child {
             border-radius: 0 0 8px 8px;
           }
-
-
         }
       }
-
     }
   }
 }

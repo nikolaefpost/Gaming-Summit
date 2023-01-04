@@ -1,7 +1,7 @@
 @import "styles/mixins";
 @import "styles/colors";
 
-.speakers{
+.speakers {
   height: auto;
   display: block;
   //background: $background-color;
@@ -10,8 +10,7 @@
   z-index: 30;
   padding: 0 95px;
 
-
-  & .red_spots2{
+  & .red_spots2 {
     position: absolute;
     width: 1606px;
     height: 1741px;
@@ -41,7 +40,7 @@
   //  z-index: 21;
   //}
 
-  & .content{
+  & .content {
     width: 100%;
     height: 100%;
     max-width: 1410px;
@@ -52,7 +51,7 @@
     position: relative;
     z-index: 22;
 
-    & h5{
+    & h5 {
       width: 100%;
 
       @include fonts(400, 13px, 17px, $accent);
@@ -60,20 +59,19 @@
       text-transform: uppercase;
     }
 
-    & .title{
+    & .title {
       margin-top: 44px;
       @include display-flex(flex-start, flex-start);
 
-      & .left{
-
-        & div{
+      & .left {
+        & div {
           @include fonts(500, 76px, 69px, $accent);
           letter-spacing: 2.77721px;
           text-transform: uppercase;
           display: block;
         }
 
-        & div:last-child{
+        & div:last-child {
           color: $midday_sun;
         }
       }
@@ -106,7 +104,7 @@
       //}
     }
 
-    & .slider{
+    & .slider {
       margin-top: 48px;
       @include display-flex(center, flex-start);
       //gap: calc((100% - 1000px)/2);
@@ -114,41 +112,40 @@
       position: relative;
       z-index: 20;
 
-      & .card{
+      & .card {
         flex: 0 0 30%;
         min-width: 280px;
         height: 456px;
         position: relative;
         z-index: 20;
 
-        & .content_card{
+        & .content_card {
           height: 100%;
           position: relative;
 
-          & span:nth-child(1){
-            height: 100%!important;
+          & span:nth-child(1) {
+            height: 100% !important;
           }
 
-          & a{
+          & a {
             width: 46px;
             height: 46px;
-            position: absolute!important;
+            position: absolute !important;
             top: 23px;
             right: 32px;
             z-index: 21;
             cursor: pointer;
           }
 
-          & .name{
+          & .name {
             position: absolute;
             width: 200px;
             top: 367px;
             left: 25px;
             @include fonts(700, 36px, 30px, white);
-
           }
 
-          & .position{
+          & .position {
             position: absolute;
             width: 272px;
             top: 337px;
@@ -158,7 +155,7 @@
           }
         }
 
-        & .empty_card{
+        & .empty_card {
           height: 100%;
           position: relative;
           z-index: 20;
@@ -168,7 +165,7 @@
           filter: drop-shadow(0px 4px 100px rgba(0, 0, 0, 0.2));
           @include display-flex(flex-start, flex-end);
 
-          & div{
+          & div {
             @include fonts(400, 15px, 20px, white);
             text-transform: uppercase;
           }
@@ -176,17 +173,17 @@
       }
     }
 
-    & .slider_control{
+    & .slider_control {
       margin-top: 102px;
       @include display-flex(space-between);
       position: relative;
       z-index: 22;
 
-      & .buttons{
+      & .buttons {
         @include display-flex;
         width: 12%;
 
-        & button{
+        & button {
           width: 85px;
           height: 85px;
           border: 1px solid $hot_pink;
@@ -194,53 +191,51 @@
           @include display-flex;
           cursor: pointer;
 
-          & svg{
+          & svg {
             color: #868297;
             width: 45px;
             height: 45px;
 
-            &:hover{
+            &:hover {
               color: white;
             }
           }
         }
       }
 
-
-      & .input_line{
+      & .input_line {
         width: 81%;
 
         & .range {
-          -webkit-appearance: none;  /* Override default CSS styles */
+          -webkit-appearance: none; /* Override default CSS styles */
           appearance: none;
           width: 100%;
           height: 1px;
           background: #868297;
           outline: none;
-          -webkit-transition: .5s;
-          transition: all .5s ease-in-out;
+          -webkit-transition: 0.5s;
+          transition: all 0.5s ease-in-out;
         }
 
         & .range:hover {
           background: white;
         }
 
-
         & .range::-webkit-slider-thumb {
           -webkit-appearance: none;
           appearance: none;
           width: 254px;
           height: 12px;
-          background: #2C326F;
+          background: #2c326f;
           box-shadow: 0 0 13px rgba(0, 0, 0, 0.25);
           cursor: pointer;
-          transition: all .5s ease-in-out;
+          transition: all 0.5s ease-in-out;
         }
 
         & .range::-moz-range-thumb {
           width: 254px;
           height: 12px;
-          background: #2C326F;
+          background: #2c326f;
           box-shadow: 0 0 13px rgba(0, 0, 0, 0.25);
           cursor: pointer;
         }
@@ -248,20 +243,19 @@
     }
   }
 
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 500px) {
     height: auto;
     padding: 0 30px;
     z-index: 20;
-    & .smoke9{
+    & .smoke9 {
       display: none;
     }
 
-
-    & .red_spots2{
+    & .red_spots2 {
       display: none;
     }
 
-    & .content{
+    & .content {
       width: 100%;
       height: 100%;
       max-width: 1410px;
@@ -269,47 +263,46 @@
       padding-top: 106px;
       border-top: none;
 
-      & h5{
+      & h5 {
         margin-left: 29px;
         width: 100%;
         @include fonts(400, 12px, 17px, $accent);
       }
 
-      & .title{
+      & .title {
         margin-top: 0;
         @include display-flex(flex-start, flex-start);
         flex-direction: column;
         gap: 29px;
 
-        & .left{
-
-          & div{
+        & .left {
+          & div {
             @include fonts(500, 32px, 69px, $accent);
             display: block;
           }
 
-          & div:last-child{
+          & div:last-child {
             color: $midday_sun;
             margin-top: -25px;
           }
         }
 
-        & .right{
+        & .right {
           width: 100%;
           @include display-flex(flex-start, flex-end);
           flex-direction: column;
 
-          & div{
+          & div {
             margin-top: 0;
             @include fonts(400, 20px, 30px, white);
           }
 
-          & div:last-child{
+          & div:last-child {
             margin-top: 10px;
             @include display-flex;
             cursor: pointer;
 
-            & svg{
+            & svg {
               color: $hot_pink;
               margin: 3px 0 0 7px;
               width: 22px;
@@ -318,20 +311,20 @@
         }
       }
 
-      & .slider{
+      & .slider {
         margin-top: 30px;
         @include display-flex;
         position: relative;
         z-index: 20;
 
-        & .card{
+        & .card {
           width: 312px;
           height: 456px;
           position: relative;
           z-index: 20;
 
-          & span:nth-child(2){
-            position: absolute!important;
+          & span:nth-child(2) {
+            position: absolute !important;
             //width: 46px;
             //height: 46px;
             top: 23px;
@@ -340,7 +333,7 @@
             cursor: pointer;
           }
 
-          & .name{
+          & .name {
             position: absolute;
             width: 272px;
             top: 322px;
@@ -348,7 +341,7 @@
             @include fonts(700, 36px, 30px, white);
           }
 
-          & .position{
+          & .position {
             position: absolute;
             width: 272px;
             top: 401px;
@@ -356,21 +349,20 @@
             @include fonts(400, 15px, 20px, white);
           }
         }
-
       }
 
-      & .slider_control{
+      & .slider_control {
         margin-top: 26px;
         @include display-flex(space-between);
         position: relative;
         z-index: 22;
         //gap: 20px;
 
-        & .buttons{
+        & .buttons {
           @include display-flex;
           width: 27%;
 
-          & button{
+          & button {
             width: 43px;
             height: 43px;
             border: 1px solid $hot_pink;
@@ -378,39 +370,36 @@
             @include display-flex;
             cursor: pointer;
 
-            & svg{
+            & svg {
               color: #868297;
               width: 22px;
               height: 45px;
 
-              &:hover{
+              &:hover {
                 color: white;
               }
             }
           }
         }
 
-
-        & .input_line{
+        & .input_line {
           width: 67%;
           @include display-flex;
-
-
 
           & .range::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
             width: 43px;
             height: 5px;
-            background: #2C326F;
+            background: #2c326f;
             box-shadow: 0 0 13px rgba(0, 0, 0, 0.25);
-            transition: all .5s ease-in-out;
+            transition: all 0.5s ease-in-out;
           }
 
           & .range::-moz-range-thumb {
             width: 45px;
             height: 5px;
-            background: #2C326F;
+            background: #2c326f;
             box-shadow: 0 0 13px rgba(0, 0, 0, 0.25);
             cursor: pointer;
           }

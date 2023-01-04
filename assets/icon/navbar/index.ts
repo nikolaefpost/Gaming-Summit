@@ -1,5 +1,5 @@
-import russia from "./russia.svg";
 import estonia from "./estonia.svg";
+import russia from "./russia.svg";
 import usa from "./usa.svg";
 
-export {russia, estonia, usa}
+export { russia, estonia, usa };

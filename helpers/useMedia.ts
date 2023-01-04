@@ -1,25 +1,25 @@
-import  {useEffect, useState, useCallback} from 'react';
+import { useCallback, useEffect, useState } from "react";
 
 export const useMediaQuery = (width: number): boolean => {
-  const [targetReached, setTargetReached] = useState(false)
+  const [targetReached, setTargetReached] = useState(false);
 
-  const updateTarget = useCallback((e: { matches: any; }) => {
-    if (e.matches) setTargetReached(true)
-    else setTargetReached(false)
-  }, [])
+  const updateTarget = useCallback((e: { matches: any }) => {
+    if (e.matches) setTargetReached(true);
+    else setTargetReached(false);
+  }, []);
 
   useEffect(() => {
-    const media = window.matchMedia(`(max-width: ${width}px)`)
-    media.addEventListener('change', updateTarget)
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addEventListener("change", updateTarget);
 
     // Check on mount (callback is not called until a change occurs)
-    if (media.matches) setTargetReached(true)
+    if (media.matches) setTargetReached(true);
 
-    return () => media.removeEventListener('change', updateTarget)
-  }, [])
+    return () => media.removeEventListener("change", updateTarget);
+  }, []);
 
-  return targetReached
-}
+  return targetReached;
+};
 
 export const useScroll = (startLabel: string): string => {
   const [label, setLabel] = useState<string>(startLabel);
@@ -40,8 +40,8 @@ export const useScroll = (startLabel: string): string => {
     };
   }, []);
 
-  return label
-}
+  return label;
+};
 
 export const createArray = (length: number): number[] => {
   return new Array(length).fill(0).map((val, i) => +val + i);

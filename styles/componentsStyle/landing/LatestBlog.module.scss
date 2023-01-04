@@ -10,63 +10,62 @@
   position: relative;
   z-index: 20;
 
-  & .title{
-    margin: 0 0 50px 100px ;
+  & .title {
+    margin: 0 0 50px 100px;
     width: 100%;
 
-    & h2{
-      @include fonts(500, 62px, 52px, #FFFFFF);
+    & h2 {
+      @include fonts(500, 62px, 52px, #ffffff);
       text-transform: uppercase;
     }
 
-    & p{
+    & p {
       margin-top: 22px;
       @include fonts(500, 24px, 28px, rgba(255, 255, 255, 0.6));
       letter-spacing: 1px;
     }
   }
 
-  & .slider{
+  & .slider {
     margin: 50px 0 0 90px;
     height: 644px;
     position: relative;
     overflow: hidden;
 
-    & .shift_block{
+    & .shift_block {
       position: absolute;
       @include display-flex(flex-start);
       gap: 39px;
       height: 100%;
       top: 0;
 
-      & .card:last-child{
+      & .card:last-child {
         margin-right: 29px;
       }
 
-      & .card{
+      & .card {
         width: 363px;
         height: 100%;
         cursor: pointer;
 
-        & .photo_desktop{
+        & .photo_desktop {
           display: block;
           height: 530px;
           width: 100%;
-          background: #2C326F;
+          background: #2c326f;
           @include display-flex;
 
-          & .empty_text{
+          & .empty_text {
             @include display-flex;
             @include fonts(500, 20px, 24px, $hot_pink);
 
-            & svg{
+            & svg {
               margin-left: 16px;
             }
           }
-
         }
 
-        & .text{
+        & .text {
           margin-top: 25px;
           height: 89px;
           display: block;
@@ -78,17 +77,17 @@
     }
   }
 
-  & .slider_control{
+  & .slider_control {
     margin: 102px 95px 0;
     @include display-flex(space-between);
     position: relative;
     z-index: 22;
 
-    & .buttons{
+    & .buttons {
       @include display-flex;
       width: 12%;
 
-      & button{
+      & button {
         width: 85px;
         height: 85px;
         border: 1px solid $hot_pink;
@@ -96,99 +95,97 @@
         @include display-flex;
         cursor: pointer;
 
-        & svg{
+        & svg {
           color: #868297;
           width: 45px;
           height: 45px;
 
-          &:hover{
+          &:hover {
             color: white;
           }
         }
       }
     }
 
-    & .input_line{
+    & .input_line {
       width: 81%;
 
       & .range {
-        -webkit-appearance: none;  /* Override default CSS styles */
+        -webkit-appearance: none; /* Override default CSS styles */
         appearance: none;
         width: 100%;
         height: 1px;
         background: #868297;
         outline: none;
-        -webkit-transition: .5s;
-        transition: all .5s ease-in-out;
+        -webkit-transition: 0.5s;
+        transition: all 0.5s ease-in-out;
       }
 
       & .range:hover {
         background: white;
       }
 
-
       & .range::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
         width: 254px;
         height: 12px;
-        background: #2C326F;
+        background: #2c326f;
         box-shadow: 0 0 13px rgba(0, 0, 0, 0.25);
         cursor: pointer;
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
       }
 
       & .range::-moz-range-thumb {
         width: 254px;
         height: 12px;
-        background: #2C326F;
+        background: #2c326f;
         box-shadow: 0 0 13px rgba(0, 0, 0, 0.25);
         cursor: pointer;
       }
     }
   }
 
-  @media screen and (max-width: 500px){
-
-    & .title{
-      margin: 0 29px ;
+  @media screen and (max-width: 500px) {
+    & .title {
+      margin: 0 29px;
       width: calc(100% - 54px);
 
-      & h2{
-        @include fonts(500, 28px, 56px, #FFFFFF);
+      & h2 {
+        @include fonts(500, 28px, 56px, #ffffff);
       }
 
-      & p{
+      & p {
         margin-top: 0;
         @include fonts(500, 16px, 20px, rgba(255, 255, 255, 0.6));
         letter-spacing: 1px;
       }
     }
 
-    & .slider{
+    & .slider {
       margin: 50px 0 0 29px;
       height: 553px;
       overflow-x: scroll;
 
-      & .shift_block{
+      & .shift_block {
         gap: 15px;
 
-        & .card{
+        & .card {
           width: 321px;
 
-          & .photo_desktop{
+          & .photo_desktop {
             height: 468px;
 
-            & .empty_text{
+            & .empty_text {
               @include fonts(500, 16px, 20px, $hot_pink);
 
-              & svg{
+              & svg {
                 margin-left: 16px;
               }
             }
           }
 
-          & .text{
+          & .text {
             height: auto;
             @include fonts(500, 16px, 20px, white);
           }
@@ -196,7 +193,7 @@
       }
     }
 
-    & .slider_control{
+    & .slider_control {
       display: none;
     }
   }

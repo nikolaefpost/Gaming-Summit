@@ -5,10 +5,10 @@ import { useLanguage } from "../../context";
 import styles from "../../styles/componentsStyle/News.module.scss";
 
 interface INewsStaticContent {
-  isNoTitle?: boolean
+  isNoTitle?: boolean;
 }
 
-const NewsStaticContent: React.FC<INewsStaticContent> = ({isNoTitle}) => {
+const NewsStaticContent: React.FC<INewsStaticContent> = ({ isNoTitle }) => {
   const { text } = useLanguage();
   const newsLink = "/news";
   return (
@@ -22,14 +22,15 @@ const NewsStaticContent: React.FC<INewsStaticContent> = ({isNoTitle}) => {
           <a>{text[78] || "News"}</a>
         </Link>
       </div>
-      {!isNoTitle && <>
-        <h1>Lorem Ipsum is simply dummy text of the printing and.</h1>
-        <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.{" "}
-        </p>
-      </>
-        }
+      {!isNoTitle && (
+        <>
+          <h1>Lorem Ipsum is simply dummy text of the printing and.</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.{" "}
+          </p>
+        </>
+      )}
     </header>
   );
 };

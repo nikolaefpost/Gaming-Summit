@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+
 import { FloorFirst, FloorSecond, FloorThird } from "@/../components/Map";
 
 import Layout from "../../../components/Layout";

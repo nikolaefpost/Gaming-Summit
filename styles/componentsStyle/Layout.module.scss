@@ -1,7 +1,7 @@
 @import "styles/mixins";
 @import "styles/colors";
 
-.layout{
+.layout {
   width: 100vw;
   //max-width: 375px;
   margin: auto auto;
@@ -33,13 +33,13 @@
     //background: $background-color;
     z-index: 11;
 
-
-    & .button_right, .button_left {
+    & .button_right,
+    .button_left {
       position: absolute;
       top: 12px;
       width: 44px;
       height: 44px;
-      background: #2C326F;
+      background: #2c326f;
       border-radius: 12px;
       @include display-flex;
       border: none;
@@ -61,43 +61,39 @@
     }
   }
 
-  & .footer{
+  & .footer {
     position: fixed;
     width: 100%;
     //max-width: 375px;
     height: 71px;
     bottom: 0;
-    background: #2C326F;
+    background: #2c326f;
     @include display-flex;
     gap: 45px;
     z-index: 4;
 
-    & .item{
+    & .item {
       @include display-flex;
       flex-direction: column;
       cursor: pointer;
 
-      & .icon{
+      & .icon {
         color: $diamond_dust;
       }
 
-      & span{
+      & span {
         margin-top: 5px;
         @include fonts(400, 12px, 14px, #777777);
       }
     }
 
-    & .active_item{
-      & .icon{
+    & .active_item {
+      & .icon {
         color: $hot_pink;
       }
-      & span{
+      & span {
         color: white;
       }
     }
   }
-
-
-
-
 }

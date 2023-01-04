@@ -106,7 +106,14 @@
       height: 731px;
       left: 0;
       top: 81px;
-      background-image: linear-gradient(180deg, #0A1157 0%, rgba(10, 17, 87, 0.73) 27.68%, rgba(10, 17, 87, 0.94) 51.12%, #0A1157 80.76%, #0A1157 100%);
+      background-image: linear-gradient(
+        180deg,
+        #0a1157 0%,
+        rgba(10, 17, 87, 0.73) 27.68%,
+        rgba(10, 17, 87, 0.94) 51.12%,
+        #0a1157 80.76%,
+        #0a1157 100%
+      );
       transform: matrix(1, 0, 0, -1, 0, 0);
       z-index: 2;
     }
@@ -133,7 +140,6 @@
       opacity: 0.4;
       filter: blur(500px);
     }
-
   }
 
   .content {
@@ -162,7 +168,7 @@
           position: absolute;
           width: 25px;
           height: 25px;
-          background: #FFFFFF;
+          background: #ffffff;
           box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
           border-radius: 7px;
           bottom: -4px;
@@ -170,7 +176,7 @@
           @include display-flex;
           cursor: pointer;
 
-          & .file{
+          & .file {
             display: none;
           }
         }
@@ -207,7 +213,7 @@
           cursor: pointer;
 
           & svg {
-            color: #A3B1D0;
+            color: #a3b1d0;
             width: 20px;
             height: 20px;
           }
@@ -262,7 +268,6 @@
           @include fonts(600, 14px, 16px, white);
           width: calc(100% - 100px);
           border-bottom: 1px solid $light-background;
-
         }
       }
     }
@@ -284,7 +289,7 @@
         & .sex {
           height: 30px;
           padding: 0 12px 0 7px;
-          border: 1px solid #DDDDDD;
+          border: 1px solid #dddddd;
           background: transparent;
           @include display-flex;
           border-radius: 7px;
@@ -294,7 +299,7 @@
             width: 10px;
             height: 10px;
             border-radius: 5px;
-            border: 1px solid #A3B1D0;
+            border: 1px solid #a3b1d0;
             margin-right: 7px;
             position: relative;
           }
@@ -365,7 +370,7 @@
           cursor: pointer;
 
           & svg {
-            color: #A3B1D0;
+            color: #a3b1d0;
             width: 18px;
             height: 18px;
           }
@@ -402,7 +407,7 @@
         border-radius: 8px;
         padding: 0 36px 0 16px;
         @include display-flex;
-        @include fonts(400, 14px, 16px, #FFFFFF);
+        @include fonts(400, 14px, 16px, #ffffff);
         position: relative;
 
         &:focus {
@@ -418,7 +423,7 @@
         right: 16px;
         width: 20px;
         height: 20px;
-        color: #FFFFFF;
+        color: #ffffff;
         box-shadow: 0 18px 40px -12px rgba(107, 103, 210, 0.35);
       }
 
@@ -467,13 +472,13 @@
         top: 16px;
         left: 24px;
         cursor: pointer;
-        color: #C4D2DF;
+        color: #c4d2df;
       }
 
       & input {
         all: unset;
         width: 100%;
-        @include fonts(400, 16px, 24px, #C4D2DF);
+        @include fonts(400, 16px, 24px, #c4d2df);
         letter-spacing: 0.2px;
         border: none;
         background: transparent;
@@ -481,55 +486,54 @@
         padding-left: 15px;
 
         &:-webkit-autofill {
-          -webkit-box-shadow: 0 0 0 1000px #2C326F inset;
+          -webkit-box-shadow: 0 0 0 1000px #2c326f inset;
           -webkit-text-fill-color: white !important;
         }
 
         &::placeholder {
-          @include fonts(400, 16px, 24px, #C4D2DF);
+          @include fonts(400, 16px, 24px, #c4d2df);
         }
       }
-
     }
 
-    & .language_block{
+    & .language_block {
       margin-top: 40px;
       @include display-flex();
       flex-direction: column;
       gap: 16px;
 
-      & .item{
+      & .item {
         width: 100%;
         height: 56px;
         @include display-flex(space-between);
         padding: 0 16px;
-        background: #2C326F;
+        background: #2c326f;
         border-radius: 12px;
         cursor: pointer;
 
-        & .left{
+        & .left {
           @include display-flex;
           gap: 16px;
 
-          & svg{
+          & svg {
             width: 26px;
             height: 20px;
           }
 
-          & span{
-            @include fonts(400, 16px, 24px, #FFFFFF);
+          & span {
+            @include fonts(400, 16px, 24px, #ffffff);
           }
         }
 
-        & .right{
+        & .right {
           width: 24px;
           height: 24px;
-          background: #F9E813;
-          border: 1.5px solid #F9E813;
+          background: #f9e813;
+          border: 1.5px solid #f9e813;
           border-radius: 8px;
           @include display-flex;
 
-          & svg{
+          & svg {
             width: 16px;
             height: 16px;
           }
@@ -537,20 +541,20 @@
       }
     }
 
-    & .help_block{
+    & .help_block {
       margin-top: 35px;
 
-      & h3{
-        @include fonts(400, 16px, 23px, #FFFFFF);
+      & h3 {
+        @include fonts(400, 16px, 23px, #ffffff);
         opacity: 0.8;
       }
-      & .item_block{
+      & .item_block {
         margin-top: 15px;
         @include display-flex();
         flex-direction: column;
         gap: 10px;
 
-        & .item{
+        & .item {
           width: 100%;
           height: auto;
           padding: 19px 22px 19px 63px;
@@ -558,7 +562,7 @@
           border-radius: 16px;
           position: relative;
 
-          & .icon{
+          & .icon {
             position: absolute;
             top: 16px;
             left: 16px;
@@ -570,42 +574,39 @@
             transform: matrix(1, 0, 0, -1, 0, 0);
             @include display-flex;
 
-            & svg{
+            & svg {
               width: 10px;
               height: 10px;
             }
           }
 
-          & h4{
-            @include fonts(400, 16px, 23px, #FFFFFF);
+          & h4 {
+            @include fonts(400, 16px, 23px, #ffffff);
             opacity: 0.8;
           }
 
-          & p{
+          & p {
             margin-top: 6px;
-            @include fonts(400, 16px, 23px, #FFFFFF);
+            @include fonts(400, 16px, 23px, #ffffff);
             opacity: 0.5;
           }
-
         }
       }
-
-
     }
 
-    & .qr_code{
+    & .qr_code {
       margin-top: 70px;
       @include display-flex(flex-start);
       flex-direction: column;
 
-      & h2{
+      & h2 {
         @include fonts(500, 18px, 21px, white);
         letter-spacing: 0.0264em;
         position: relative;
         display: inline;
         padding-left: 16px;
 
-        &:before{
+        &:before {
           content: "";
           position: absolute;
           top: 6px;
@@ -615,10 +616,9 @@
           border-radius: 4.5px;
           border: 1px solid $hot_pink;
         }
-
       }
 
-      & p{
+      & p {
         margin-top: 5px;
         width: 272px;
         @include fonts(400, 14px, 20px, rgba(255, 255, 255, 0.76));
@@ -626,7 +626,7 @@
         text-align: center;
       }
 
-      & .main_img{
+      & .main_img {
         margin-top: 21px;
         width: 257px;
         height: 257px;
@@ -635,7 +635,7 @@
         background: white;
       }
 
-      & h3{
+      & h3 {
         margin-top: 30px;
         @include fonts(500, 14px, 20px, rgba(255, 255, 255, 0.64));
         letter-spacing: 0.0264em;
@@ -643,11 +643,11 @@
         text-align: center;
       }
 
-      & .code{
+      & .code {
         margin-top: 19px;
         width: 327px;
         height: 33px;
-        background: #2C326F;
+        background: #2c326f;
         border-radius: 12px;
         @include display-flex;
         @include fonts(400, 14px, 16px, rgba(255, 255, 255, 0.73));
@@ -655,6 +655,4 @@
       }
     }
   }
-
-
 }

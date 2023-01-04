@@ -1,7 +1,7 @@
 @import "styles/mixins";
 @import "styles/colors";
 
-.login{
+.login {
   width: 100%;
   //max-width: 375px;
   margin: auto auto;
@@ -13,33 +13,46 @@
   overflow: hidden;
   padding: 352px 0 53px;
 
-  & .background{
+  & .background {
     position: absolute;
     width: 100%;
     height: 553px;
     //left: -56px;
     top: 142px;
-    background-image: linear-gradient(0deg, rgba(16, 18, 88, 0.2), rgba(16, 18, 88, 0.2)), linear-gradient(0deg, rgba(18, 19, 89, 0.2), rgba(18, 19, 89, 0.2)), linear-gradient(0deg, rgba(18, 19, 89, 0.2), rgba(18, 19, 89, 0.2)), url("../../public/Login/loginGround2.png");
+    background-image: linear-gradient(
+        0deg,
+        rgba(16, 18, 88, 0.2),
+        rgba(16, 18, 88, 0.2)
+      ),
+      linear-gradient(0deg, rgba(18, 19, 89, 0.2), rgba(18, 19, 89, 0.2)),
+      linear-gradient(0deg, rgba(18, 19, 89, 0.2), rgba(18, 19, 89, 0.2)),
+      url("../../public/Login/loginGround2.png");
     background-size: cover;
     background-position: 55% 0;
     z-index: 2;
     background-repeat: no-repeat;
   }
 
-  & .background1{
+  & .background1 {
     position: absolute;
     width: 504px;
     height: 634px;
     left: -100px;
     top: 28px;
-    background-image: linear-gradient(0deg, rgba(17, 19, 89, 0.59), rgba(17, 19, 89, 0.59)), linear-gradient(0deg, rgba(17, 19, 89, 0.2), rgba(17, 19, 89, 0.2)), url("../../public/Login/loginGround3.png");
+    background-image: linear-gradient(
+        0deg,
+        rgba(17, 19, 89, 0.59),
+        rgba(17, 19, 89, 0.59)
+      ),
+      linear-gradient(0deg, rgba(17, 19, 89, 0.2), rgba(17, 19, 89, 0.2)),
+      url("../../public/Login/loginGround3.png");
     background-size: cover;
     background-position: 55% 0;
     z-index: 2;
     background-repeat: no-repeat;
   }
 
-  & .background2{
+  & .background2 {
     position: absolute;
     width: 482px;
     height: 712px;
@@ -52,7 +65,7 @@
     background-repeat: no-repeat;
   }
 
-  & .background3{
+  & .background3 {
     position: absolute;
     width: 466px;
     height: 689px;
@@ -65,7 +78,7 @@
     background-repeat: no-repeat;
   }
 
-  & .background4{
+  & .background4 {
     position: absolute;
     width: 667px;
     height: 686px;
@@ -78,28 +91,42 @@
     background-repeat: no-repeat;
   }
 
-  & .gradient{
+  & .gradient {
     position: absolute;
     width: 100vw;
     height: calc(100vh - 81px);
     left: 0;
     bottom: 0;
-    background-image: linear-gradient(180deg, #0A1157 0%, rgba(10, 17, 87, 0.8) 27.68%, rgba(10, 17, 87, 0.5) 54.98%, rgba(10, 17, 87, 0.1) 80.76%, rgba(10, 17, 87, 0) 100%);
+    background-image: linear-gradient(
+      180deg,
+      #0a1157 0%,
+      rgba(10, 17, 87, 0.8) 27.68%,
+      rgba(10, 17, 87, 0.5) 54.98%,
+      rgba(10, 17, 87, 0.1) 80.76%,
+      rgba(10, 17, 87, 0) 100%
+    );
     transform: matrix(1, 0, 0, -1, 0, 0);
     z-index: 2;
   }
 
-  & .gradient2{
+  & .gradient2 {
     position: absolute;
     width: 100vw;
     height: 509px;
     left: 0;
     top: 0;
-    background-image:  linear-gradient(180deg, #0A1157 26.6%, rgba(10, 17, 87, 0.7) 39.2%, rgba(10, 17, 87, 0.43) 63.22%, rgba(10, 17, 87, 0.1) 92.04%, rgba(10, 17, 87, 0) 100%);
+    background-image: linear-gradient(
+      180deg,
+      #0a1157 26.6%,
+      rgba(10, 17, 87, 0.7) 39.2%,
+      rgba(10, 17, 87, 0.43) 63.22%,
+      rgba(10, 17, 87, 0.1) 92.04%,
+      rgba(10, 17, 87, 0) 100%
+    );
     z-index: 3;
   }
 
-  & .ellipse1{
+  & .ellipse1 {
     position: absolute;
     width: 410px;
     height: 391px;
@@ -111,7 +138,7 @@
     z-index: 3;
   }
 
-  & .ellipse2{
+  & .ellipse2 {
     position: absolute;
     width: 256px;
     height: 244px;
@@ -123,7 +150,7 @@
     z-index: 4;
   }
 
-  & .red_spots1{
+  & .red_spots1 {
     position: absolute;
     width: 354px;
     height: 504px;
@@ -135,7 +162,7 @@
     z-index: 5;
   }
 
-  & .red_spots2{
+  & .red_spots2 {
     position: absolute;
     width: 354px;
     height: 504px;
@@ -148,7 +175,7 @@
     z-index: 5;
   }
 
-  & .red_spots3{
+  & .red_spots3 {
     position: absolute;
     width: 418px;
     height: 889px;
@@ -160,7 +187,7 @@
     z-index: 5;
   }
 
-  & .logo{
+  & .logo {
     position: absolute;
     width: 163px;
     height: 155px;
@@ -171,7 +198,7 @@
     z-index: 6;
   }
 
-  & .input_block{
+  & .input_block {
     margin-top: 7px;
     width: 100%;
     height: 91px;
@@ -179,26 +206,26 @@
     @include display-flex(flex-end);
     flex-direction: column;
 
-    & .error{
+    & .error {
       position: absolute;
       width: 100%;
-      top:0;
+      top: 0;
       left: 0;
       text-align: right;
       padding-right: 9px;
       @include fonts(400, 12px, 17px, $hot_pink);
     }
 
-    & .wrapper{
+    & .wrapper {
       width: 100%;
       height: 64px;
-      background: #2C326F;
+      background: #2c326f;
       border-radius: 16px;
       padding: 0 48px;
       @include display-flex;
       position: relative;
 
-      & .icon{
+      & .icon {
         position: absolute;
         width: 24px;
         height: 24px;
@@ -207,7 +234,7 @@
         cursor: pointer;
       }
 
-      & .hide{
+      & .hide {
         position: absolute;
         width: 24px;
         height: 24px;
@@ -216,31 +243,31 @@
         cursor: pointer;
       }
 
-      & input{
+      & input {
         all: unset;
         width: 100%;
-        @include fonts(400, 14px, 16px, #FFFFFF);
+        @include fonts(400, 14px, 16px, #ffffff);
         border: none;
         background: transparent;
         cursor: pointer;
 
         &:-webkit-autofill {
-          -webkit-box-shadow: 0 0 0 1000px #2C326F inset;
-          -webkit-text-fill-color: white!important;
+          -webkit-box-shadow: 0 0 0 1000px #2c326f inset;
+          -webkit-text-fill-color: white !important;
         }
 
         &::placeholder {
-          @include fonts(400, 14px, 16px, #A3B1D0);
+          @include fonts(400, 14px, 16px, #a3b1d0);
         }
       }
     }
 
-    & .error_input{
+    & .error_input {
       border: 1px solid $hot_pink;
     }
   }
 
-  & .login_registration{
+  & .login_registration {
     display: block;
     margin-top: 28px;
     width: 100%;
@@ -248,67 +275,63 @@
     @include fonts(400, 14px, 16px, $diamond_dust);
     cursor: pointer;
 
-    & span{
-      @include fonts(400, 14px, 16px, #FFFFFF);
+    & span {
+      @include fonts(400, 14px, 16px, #ffffff);
     }
   }
 
-  & .login_form{
+  & .login_form {
     position: relative;
     z-index: 10;
     padding: 0 24px;
 
-    & h2{
-      @include fonts(600, 28px, 33px, #FFFFFF);
+    & h2 {
+      @include fonts(600, 28px, 33px, #ffffff);
     }
 
-
-
-    & p{
+    & p {
       margin-top: 20px;
       padding-right: 20px;
       width: 100%;
       text-align: right;
-      @include fonts(400, 12px, 14px, #FFFFFF);
+      @include fonts(400, 12px, 14px, #ffffff);
       cursor: pointer;
     }
 
-    & button{
+    & button {
       margin-top: 51px;
       width: 100%;
       height: 59px;
-      background: #FE3F8E;
+      background: #fe3f8e;
       border-radius: 16px;
       @include display-flex;
       border: none;
-      @include fonts(400, 16px, 19px, #FFFFFF);
+      @include fonts(400, 16px, 19px, #ffffff);
       cursor: pointer;
     }
 
-    & .register{
+    & .register {
       margin-top: 28px;
       width: 100%;
       text-align: center;
-      @include fonts(400, 14px, 16px, #A3B1D0);
+      @include fonts(400, 14px, 16px, #a3b1d0);
 
-      & span{
-        @include fonts(400, 14px, 16px, #FFFFFF);
+      & span {
+        @include fonts(400, 14px, 16px, #ffffff);
       }
-
     }
-
   }
 
-  & .check_mail{
+  & .check_mail {
     position: relative;
     z-index: 11;
     padding: 0 24px;
 
-    & h2{
-      @include fonts(600, 28px, 33px, #FFFFFF);
+    & h2 {
+      @include fonts(600, 28px, 33px, #ffffff);
     }
 
-    & p{
+    & p {
       margin: 10px 0 52px;
       @include fonts(400, 14px, 20px, rgba(255, 255, 255, 0.85));
     }
@@ -329,25 +352,25 @@
         margin-right: 12px;
         cursor: pointer;
 
-        & svg{
+        & svg {
           color: #313270;
         }
       }
 
-      & .yellow{
+      & .yellow {
         background: $midday_sun;
       }
 
       & .title {
         @include fonts(400, 14px, 20px, $diamond_dust);
 
-        & span{
-          @include fonts(600, 14px, 20px, #FFFFFF);
+        & span {
+          @include fonts(600, 14px, 20px, #ffffff);
         }
       }
     }
 
-    & button{
+    & button {
       margin-top: 85px;
       width: 100%;
       height: 59px;
@@ -355,22 +378,18 @@
       border-radius: 16px;
       @include display-flex;
       border: none;
-      @include fonts(400, 16px, 19px, #FFFFFF);
+      @include fonts(400, 16px, 19px, #ffffff);
       cursor: pointer;
     }
-
   }
 
-  & .verification_code{
+  & .verification_code {
     margin-top: -12px;
     width: 100%;
   }
-
-
-
 }
 
-.modal{
+.modal {
   position: absolute;
   width: 100%;
   height: 100vh;
@@ -380,33 +399,33 @@
   padding: 0 24px;
   @include display-flex;
 
-  & .info_block{
+  & .info_block {
     position: relative;
     width: 100%;
     height: 191px;
-    background: #2C326F;
+    background: #2c326f;
     border-radius: 10px;
     padding: 25px 41px;
 
-    & h2{
+    & h2 {
       text-align: center;
-      @include fonts(400, 16px, 19px, #FFFFFF);
+      @include fonts(400, 16px, 19px, #ffffff);
     }
 
-    & p{
+    & p {
       margin-top: 11px;
       text-align: center;
-      @include fonts(400, 14px, 20px, #A5AECE);
+      @include fonts(400, 14px, 20px, #a5aece);
     }
 
-    & a{
+    & a {
       margin: 25px auto 0;
       width: 223px;
       height: 46px;
       background: $hot_pink;
       border-radius: 14px;
       @include display-flex;
-      @include fonts(400, 16px, 19px, #FFFFFF);
+      @include fonts(400, 16px, 19px, #ffffff);
     }
   }
 }

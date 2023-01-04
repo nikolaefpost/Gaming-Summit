@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { ReactElement, useEffect } from "react";
+
 import { LanguageProvider } from "../context";
 import favicon from "../public/favicon.ico";
 import "../styles/globals.css";
@@ -24,7 +25,7 @@ const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
 
   return (
     // <SessionProvider session={session}>
-    <LanguageProvider >
+    <LanguageProvider>
       <Head>
         <title>The Best 2022 Gaming Summit</title>
         <link rel="shortcut icon" href={favicon.src} type="image/x-icon" />

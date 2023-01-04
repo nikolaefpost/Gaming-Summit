@@ -1,8 +1,9 @@
 import { AxiosError } from "axios";
 
-import SessionApi from "./SessionApi";
 import { setApiPath } from "../helpers/useInput";
 import { IResponse } from "../types";
+
+import SessionApi from "./SessionApi";
 
 export default class AuthApi {
   static query = setApiPath("/api/v1/auth");

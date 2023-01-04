@@ -82,7 +82,6 @@ export const EngData = {
   "81": "Share",
   "82": "Latest Blog Post",
   "83": "Read our latest blog post and learn more.",
-
 };
 
 export const RusData = {
@@ -169,7 +168,6 @@ export const RusData = {
   "81": "Share",
   "82": "Latest Blog Post",
   "83": "Read our latest blog post and learn more.",
-
 };
 
 export const EstData = {

@@ -8,10 +8,10 @@ import {
   LatestBlog,
   Navbar,
   PlacePartners,
+  ProgramRoom,
   Remember,
   Speakers,
   Tickets,
-  ProgramRoom
 } from "../components";
 import { ILatestBlog, ILatestBlogFields } from "../contentful";
 import client from "../contentfulClient/index";
@@ -45,7 +45,7 @@ const Home: NextPage<IHome> = ({ blogs }) => {
       <Navbar label={label} />
       <LandingHeader />
       <GameIndustry />
-      <ProgramRoom/>
+      <ProgramRoom />
       <Speakers />
       <Tickets />
       <LatestBlog blogs={undefined} />

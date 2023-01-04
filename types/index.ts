@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image";
-import React, {FC} from "react";
-import {INewArticle} from "../contentful";
+import React, { FC } from "react";
+
+import { INewArticle } from "../contentful";
 
 export interface INavData {
   id: number;
@@ -13,7 +14,6 @@ export interface INavData {
 export interface IText {
   [key: string]: string;
 }
-
 
 export type OutputType<T> = {
   value: T;
@@ -78,7 +78,7 @@ export interface InfoText {
 }
 
 export interface IFloor {
-  setInfoText: (item:InfoText)=>void;
+  setInfoText: (item: InfoText) => void;
 }
 
 export interface IResponse {

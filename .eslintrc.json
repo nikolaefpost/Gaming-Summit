@@ -33,21 +33,13 @@
     "import/resolver": {
       "typescript": {},
       "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   },
   "overrides": [
     {
-      "files": [
-        "*.ts",
-        "*.tsx"
-      ],
+      "files": ["*.ts", "*.tsx"],
       "extends": [
         "plugin:import/typescript",
         "plugin:@typescript-eslint/recommended",
@@ -55,9 +47,7 @@
       ],
       "parserOptions": {
         "tsconfigRootDir": "./",
-        "project": [
-          "./tsconfig.json"
-        ]
+        "project": ["./tsconfig.json"]
       }
     }
   ],
@@ -78,12 +68,8 @@
     ],
     "no-use-before-define": "off",
     "no-shadow": "off",
-    "@typescript-eslint/no-use-before-define": [
-      "error"
-    ],
-    "@typescript-eslint/no-shadow": [
-      "error"
-    ],
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/no-shadow": ["error"],
     "@typescript-eslint/explicit-function-return-type": [
       "warn",
       {
@@ -106,9 +92,7 @@
     "react/jsx-filename-extension": [
       "warn",
       {
-        "extensions": [
-          ".tsx"
-        ]
+        "extensions": [".tsx"]
       }
     ],
     "react/jsx-props-no-spreading": "off",
@@ -121,14 +105,14 @@
     "react/function-component-definition": [
       2,
       {
-        "namedComponents": [
-          "arrow-function",
-          "function-expression"
-        ],
-        "unnamedComponents": [
-          "arrow-function",
-          "function-expression"
-        ]
+        "namedComponents": ["arrow-function", "function-expression"],
+        "unnamedComponents": ["arrow-function", "function-expression"]
+      }
+    ],
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
       }
     ]
   }
