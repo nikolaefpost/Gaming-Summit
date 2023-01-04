@@ -1,0 +1,10 @@
+export { default as Navbar } from "./Navbar";
+export { default as LandingHeader } from "./LandingHeader";
+export { default as GameIndustry } from "./GameIndustry";
+export { default as Speakers } from "./Speakers";
+export { default as Tickets } from "./Tickets";
+export { default as Remember } from "./Remember";
+export { default as PlacePartners } from "./Place&Partners";
+export { default as LandingFooter } from "./LandingFooter";
+export { default as LatestBlog } from "./LatestBlog";
+export { default as ProgramRoom } from "./ProgramRoom";

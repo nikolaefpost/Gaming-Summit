@@ -1,0 +1,209 @@
+@import "styles/mixins";
+@import "styles/colors";
+
+.footer{
+  height: 374px;
+  display: block;
+  background: transparent;
+  overflow: hidden;
+  position: relative;
+  z-index: 42;
+  padding: 0 95px;
+
+  //& .smoke10{
+  //  position: absolute;
+  //  width: 100%;
+  //  height: 446px;
+  //  top: 46px;
+  //  left: 280px;
+  //  background-size: 100%;
+  //  z-index: 21;
+  //  background-image: url("../../../public/smoke.png");
+  //  mix-blend-mode: hard-light;
+  //  opacity: .1;
+  //  background-position: left top;
+  //  background-repeat: no-repeat;
+  //}
+
+  & .content{
+    width: 100%;
+    height: 282px;
+    max-width: 1410px;
+    margin: 0 auto;
+    @include display-flex(stretch, flex-start);
+    gap: 94px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 39px 0 89px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 22;
+
+    & .left{
+      display: block;
+      width: 550px;
+
+      & h3{
+        @include fonts(700, 32px, 43px, white);
+        display: block;
+        text-wrap: none;
+      }
+
+      & p{
+        margin-top: 30px;
+        display: block;
+        width: 100%;
+        @include fonts(500, 20px, 27px, rgba(255, 255, 255, 0.6));
+      }
+    }
+
+    & .center{
+      display: block;
+      width: 375px;
+
+      & h3{
+        @include fonts(700, 32px, 43px, white);
+        display: block;
+      }
+
+      & a{
+        margin-top: 30px;
+        display: block;
+        width: 100%;
+        @include fonts(500, 20px, 27px, rgba(255, 255, 255, 0.6));
+        cursor: pointer;
+      }
+    }
+
+    & .right{
+      width: 330px;
+      display: block;
+
+      & h3{
+        display: block;
+        width: 300px;
+        @include fonts(700, 32px, 43px, white);
+      }
+
+      & .social{
+        margin-top: 19px;
+        @include display-flex(flex-start);
+        gap: 13px;
+
+        & .item{
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          background: #FFFFFF;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+          @include display-flex
+        }
+      }
+    }
+  }
+
+  & .copyright{
+    margin-top: 33px;
+    display: block;
+    text-align: center;
+    @include fonts(400, 16px, 30px, rgba(255, 255, 255, 0.6));
+  }
+
+  @media screen and (max-width: 500px){
+    height: auto;
+    display: block;
+    background: transparent;
+    overflow: hidden;
+    position: relative;
+    z-index: 42;
+    padding: 0 29px;
+
+    & .smoke10{
+     display: none;
+    }
+
+    & .content{
+      width: 100%;
+      height: auto;
+      max-width: 1410px;
+      margin: 0 auto;
+      @include display-flex(flex-start);
+      flex-direction: column;
+      gap: 35px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 35px 29px;
+      box-sizing: border-box;
+
+
+      & .left{
+        display: block;
+        width: 100%;
+
+
+        & h3{
+          @include fonts(700, 20px, 27px, white);
+          display: block;
+        }
+
+        & p{
+          margin-top: 15px;
+          display: block;
+          width: 100%;
+          @include fonts(500, 16px, 21px, rgba(255, 255, 255, 0.6));
+        }
+      }
+
+      & .center{
+        display: block;
+        width: 100%;
+
+        & h3{
+          @include fonts(700, 20px, 27px, white);
+          display: block;
+        }
+
+        & a{
+          margin-top: 16px;
+          display: block;
+          width: 100%;
+          @include fonts(500, 16px, 21px, rgba(255, 255, 255, 0.6));
+        }
+      }
+
+      & .right{
+        width: 100%;
+        display: block;
+
+        & h3{
+          display: block;
+          width: 100%;
+          height: auto;
+          @include fonts(700, 20px, 28px, white);
+        }
+
+        & .social{
+          margin-top: 30px;
+          @include display-flex(flex-start);
+          gap: 13px;
+
+          & .item{
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #FFFFFF;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+            @include display-flex
+          }
+        }
+      }
+    }
+
+    & .copyright{
+      margin: 16px 0;
+      display: block;
+      text-align: center;
+      @include fonts(400, 12px, 23px, rgba(255, 255, 255, 0.6));
+    }
+  }
+}

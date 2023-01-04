@@ -1,0 +1,625 @@
+@import "styles/mixins";
+@import "styles/colors";
+
+.wrapper {
+  width: 100%;
+  //height: auto;
+  //height: 3014px;
+  position: relative;
+  background: $background-color;
+  overflow: hidden;
+
+  & .left_red_spots{
+    position: absolute;
+    width: 323px;
+    height: 1101px;
+    top: 804px;
+    left: 0;
+    background-image: url("../../public/News/left_red.spots.png");
+  }
+
+  & .right_red_spots{
+    position: absolute;
+    width: 100%;
+    height: 2299px;
+    background-image: url("../../public/News/right_red_spots.png");
+  }
+
+  & .red_shadow1{
+    position: absolute;
+    width: 558px;
+    height: 528px;
+    top: 213px;
+    left: 1059px;
+    background: #FE3F8E;
+    opacity: 0.4;
+    filter: blur(500px);
+  }
+
+  & .red_shadow2{
+    position: absolute;
+    width: 558px;
+    height: 528px;
+    top: 859px;
+    left: 8px;
+    background: #FE3F8E;
+    opacity: 0.4;
+    filter: blur(500px);
+  }
+
+  & .red_shadow3{
+    position: absolute;
+    width: 558px;
+    height: 528px;
+    top: 1376px;
+    left: 373px;
+    background: #FE3F8E;
+    opacity: 0.4;
+    filter: blur(500px);
+  }
+
+  & .top_right_smog{
+    position: absolute;
+    width: 962px;
+    height: 687px;
+    right: 0;
+    top: 0;
+    background-image: url("../../public/News/top_right_smog.png");
+  }
+
+  & .center_smog{
+    position: absolute;
+    width: 1503px;
+    height: 758px;
+    left: 0;
+    top: 1864px;
+    background-image: url("../../public/News/center_smog.png");
+  }
+
+  & .center_smog2{
+    position: absolute;
+    width: 100%;
+    height: 758px;
+    left: 0;
+    top: 2156px;
+    background-image: url("../../public/News/center_smog2.png");
+    background-size: cover;
+  }
+
+  & .bottom_right_smog{
+    position: absolute;
+    width: 962px;
+    height: 758px;
+    right: 0;
+    top: 2185px;
+    background-image: url("../../public/News/bottom_right_smog.png");
+    background-size: cover;
+  }
+
+  & .bottom_center_smog1{
+    position: absolute;
+    width: 1026px;
+    height: 446px;
+    left: 282px;
+    top: 2390px;
+    background-image: url("../../public/News/bottom_centersmog.png");
+    background-size: cover;
+  }
+
+  & .bottom_center_smog2{
+    position: absolute;
+    width: 1026px;
+    height: 446px;
+    left: 186px;
+    top: 2613px;
+    background-image: url("../../public/News/bottom_centersmog.png");
+    background-size: cover;
+  }
+
+  & .news{
+    position: relative;
+    padding: 135px 95px 191px;
+    z-index: 1;
+
+    & .content{
+      max-width: 1410px;
+      margin: 0 auto;
+
+      & header{
+        max-width: 942px;
+        @include display-flex(flex-start, flex-start);
+        flex-direction: column;
+
+        & .nav{
+          @include display-flex;
+
+          & a, span{
+            @include fonts(500, 20px, 42px, white);
+            cursor: pointer;
+            margin-right: 4px;
+          }
+
+          & a:last-child{
+            color: $hot_pink;
+            margin-right: 0;
+          }
+        }
+
+        & h1{
+          margin-top: 37px;
+          @include fonts(500, 62px, 94px, white);
+        }
+
+        & p{
+          margin-top: 20px;
+          @include fonts(500, 22px, 41px, rgba(255, 255, 255, 0.6));
+          max-width: 609px;
+        }
+      }
+
+      & main{
+        margin-top: 65px;
+        @include display-flex(center, flex-start);
+        gap: 22px;
+
+        & .ticket_block{
+          width: calc(100% - 931px);
+        }
+
+        & .slider{
+          width: 931px;
+          @include display-flex(center, flex-start);
+          column-gap: 25px;
+          row-gap: 15px;
+          flex-wrap: wrap;
+
+          & .card{
+            width: 443px;
+            height: 570px;
+
+            & .photo{
+              width: 100%;
+              height: 283px;
+              background-size: cover;
+            }
+
+            & .text{
+              width: 100%;
+              height: 287px;
+              padding: 27px 22px 30px;
+              background: #2C326F;
+              box-shadow: 0 4px 40px rgba(43, 89, 255, 0.08);
+
+              & .date{
+                @include display-flex(flex-start);
+
+                & svg{
+                  width: 22px;
+                  height: 20px;
+                  margin-right: 10px;
+                  color: white;
+                }
+
+                & span{
+                  @include fonts(500, 16px, 21px, white);
+                }
+              }
+
+              & h2{
+                margin-top: 20px;
+                @include fonts(500, 20px, 26px, white);
+                height: 52px;
+                overflow: hidden;
+              }
+
+              & .short{
+                margin-top: 15px;
+                height: 78px;
+                position: relative;
+
+                & p{
+                  @include fonts(500, 16px, 26px, rgba(255, 255, 255, .6));
+                  height: 52px;
+                  overflow: hidden;
+                }
+
+                &:after{
+                  content: "related to......";
+                  position: absolute;
+                  top: 52px;
+                  left: 0;
+                  @include fonts(500, 16px, 26px, rgba(255, 255, 255, .6));
+                }
+              }
+
+              & .read_more{
+                margin-top: 26px;
+                @include fonts(500, 16px, 24px, $hot_pink);
+                @include display-flex(flex-start);
+
+                & svg{
+                  color: $hot_pink;
+                  margin-left: 7px;
+                  width: 16px;
+                  height: 16px;
+                }
+              }
+
+            }
+          }
+
+          & .single_card{
+            width: 100%;
+
+            & .photo_new{
+              width: 100%;
+              height: 487px;
+              background-size: cover;
+            }
+
+            & .text_new {
+              width: 100%;
+              padding: 31px 50px 58px;
+              background: #2C326F;
+              box-shadow: 0 4px 40px rgba(43, 89, 255, 0.08);
+              border-radius: 10px;
+
+              & .date{
+                @include display-flex(flex-start);
+
+                & svg{
+                  width: 22px;
+                  height: 20px;
+                  margin-right: 10px;
+                  color: white;
+                }
+
+                & span{
+                  @include fonts(500, 16px, 21px, white);
+                }
+              }
+
+              & .rich_text{
+                margin-top: 39px;
+                color: white;
+
+                & p{
+                  margin-bottom: 15px;
+                }
+
+                & p:nth-child(even){
+                  margin-bottom: 30px;
+                }
+              }
+
+              & .social{
+                margin-top: 32px;
+
+                & h3{
+                  @include fonts(600, 20px, 26px, white);
+                }
+
+                & .block{
+                  margin-top: 20px;
+                  @include display-flex(flex-start);
+                  gap: 19px;
+
+                  & a{
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      & .slider_control{
+        margin-top: 26px;
+        width: 100%;
+        @include display-flex(flex-end);
+        gap: 25px;
+
+        & .slider_item{
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+          border: 0.25px solid #FFFFFF;
+          box-shadow: 0 4px 40px rgba(43, 89, 255, 0.08);
+          @include display-flex;
+          @include fonts(500, 16px, 24px, white);
+          background: transparent;
+          cursor: pointer;
+
+          & svg{
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        & .active_item{
+          border: none;
+          background: $hot_pink;
+          color: $light-background;
+
+          & svg{
+            color: $hot_pink;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px){
+
+    & .left_red_spots{
+      width: 100%;
+      height: 1101px;
+      top: 1500px;
+      left: 0;
+      background-image: url("../../public/News/left_red.spots.png");
+      transform: rotate(-180deg);
+    }
+
+    & .right_red_spots{
+      position: absolute;
+      width: 100%;
+      top: 180px;
+      left:0;
+      height: 100%;
+      background-image: url("../../public/News/right_red_spots.png");
+      //background-size: cover;
+      background-position: 90% 0;
+      //z-index: 4;
+    }
+
+    & .red_shadow1{
+      position: absolute;
+      width: 558px;
+      height: 528px;
+      top: 213px;
+      left: 1059px;
+      background: #FE3F8E;
+      opacity: 0.4;
+      filter: blur(500px);
+    }
+
+    & .red_shadow2{
+      position: absolute;
+      width: 558px;
+      height: 528px;
+      top: 1560px;
+      left: 8px;
+      background: #FE3F8E;
+      opacity: 0.4;
+      filter: blur(500px);
+      z-index: 1;
+    }
+
+    & .red_shadow3{
+      position: absolute;
+      width: 558px;
+      height: 528px;
+      top: 1376px;
+      left: 373px;
+      background: #FE3F8E;
+      opacity: 0.4;
+      filter: blur(500px);
+    }
+
+    & .top_right_smog{
+      position: absolute;
+      width: 962px;
+      height: 687px;
+      right: 0;
+      top: 0;
+      background-image: url("../../public/News/top_right_smog.png");
+    }
+
+    & .center_smog{
+      position: absolute;
+      width: 1503px;
+      height: 758px;
+      left: 0;
+      top: 1364px;
+      background-image: url("../../public/News/center_smog.png");
+    }
+
+    & .center_smog2{
+      position: absolute;
+      width: 100%;
+      height: 758px;
+      left: 0;
+      top: 2156px;
+      background-image: url("../../public/News/center_smog2.png");
+      background-size: cover;
+    }
+
+    & .bottom_right_smog{
+      position: absolute;
+      width: 962px;
+      height: 758px;
+      right: 0;
+      top: 2185px;
+      background-image: url("../../public/News/bottom_right_smog.png");
+      background-size: cover;
+    }
+
+    & .bottom_center_smog1{
+      position: absolute;
+      width: 1026px;
+      height: 446px;
+      left: 282px;
+      top: 2390px;
+      background-image: url("../../public/News/bottom_centersmog.png");
+      background-size: cover;
+    }
+
+    & .bottom_center_smog2{
+      position: absolute;
+      width: 1026px;
+      height: 446px;
+      left: 186px;
+      top: 2613px;
+      background-image: url("../../public/News/bottom_centersmog.png");
+      background-size: cover;
+    }
+
+    & .news{
+      padding: 70px 29px 0;
+
+
+      & .content{
+        position: relative;
+        z-index: 2;
+
+        & header{
+
+          & .nav{
+            @include display-flex;
+
+            & a, span{
+              @include fonts(500, 16px, 33px, white);
+            }
+          }
+
+          & h1{
+            margin-top: 15px;
+            @include fonts(500, 30px, 45px, white);
+          }
+
+          & p{
+            margin-top: 16px;
+            @include fonts(500, 16px, 30px, rgba(255, 255, 255, 0.6));
+          }
+        }
+
+        & main{
+          margin-top: 53px;
+          @include display-flex(flex-start, center );
+          flex-direction: column;
+          gap: 68px;
+
+          & .ticket_block{
+            width: 100%;
+          }
+
+          & .order{
+            order: 1;
+            margin-bottom: 61px;
+          }
+
+
+          & .slider{
+            width: 100%;
+            column-gap: unset;
+            row-gap: unset;
+            flex-wrap: wrap;
+
+
+
+
+            & .single_card{
+              width: 100%;
+
+              & .photo_new{
+                width: 100%;
+                height: 285px;
+                background-size: cover;
+              }
+
+              & .text_new {
+                width: 100%;
+                padding: 31px 15px 25px;
+                background: #2C326F;
+                box-shadow: 0 4px 40px rgba(43, 89, 255, 0.08);
+                border-radius: 10px;
+
+                & .date{
+                  @include display-flex(flex-start);
+
+                  & svg{
+                    width: 22px;
+                    height: 20px;
+                    margin-right: 10px;
+                    color: white;
+                  }
+
+                  & span{
+                    @include fonts(500, 16px, 21px, white);
+                  }
+                }
+
+                & .rich_text{
+                  margin-top: 39px;
+                  color: white;
+
+                  & p{
+                    margin-bottom: 15px;
+                  }
+
+                  & p:nth-child(even){
+                    margin-bottom: 30px;
+                  }
+                }
+
+                & .social{
+                  margin-top: 32px;
+
+                  & h3{
+                    @include fonts(600, 20px, 26px, white);
+                  }
+
+                  & .block{
+                    margin-top: 20px;
+                    @include display-flex(flex-start);
+                    gap: 19px;
+
+                    & a{
+                      cursor: pointer;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        & .slider_control{
+          display: none;
+        }
+
+        & .slider_control_mobile{
+          position: relative;
+          margin: 53px 0;
+          @include display-flex;
+          gap: 25px;
+          z-index: 2;
+
+          & .items{
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #1B1862;
+
+          }
+
+          & .active{
+            background: white;
+            position: relative;
+
+            &:after{
+              content: "";
+              position: absolute;
+              z-index: 3;
+              width: 25px;
+              height: 25px;
+              top: -9px;
+              left: -9px;
+              border-radius: 50%;
+              border: 1px solid #1B1862;
+            }
+          }
+        }
+      }
+    }
+  }
+}

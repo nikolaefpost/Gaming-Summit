@@ -1,0 +1,320 @@
+@import "styles/mixins";
+@import "styles/colors";
+
+.rating {
+  width: 100%;
+  height: calc(100% - 137px);
+  //background: transparent;
+  position: relative;
+  z-index: 4;
+  overflow: auto;
+  padding: 0 24px;
+
+  & .wrapper_background {
+    position: fixed;
+    left: -24px;
+    top: -12px;
+    width: calc(100% + 24px);
+    height: calc(100% - 59px);
+    overflow: hidden;
+    z-index: 1;
+
+    & .background {
+      position: absolute;
+      width: 100%;
+      height: 670px;
+      left: 0;
+      top: 142px;
+      background-image: url("../../public/Rating/ratingBackgr.png");
+      background-size: cover;
+      background-position: 100% 0;
+      z-index: 2;
+      background-repeat: no-repeat;
+      mix-blend-mode: lighten;
+    }
+
+    & .background_program {
+      position: absolute;
+      width: 100%;
+      height: 670px;
+      left: 0;
+      top: 142px;
+      background-image: url("../../public/Profile/privacyProfileBackgr.png");
+      background-size: cover;
+      background-position: 50% 0;
+      z-index: 2;
+      mix-blend-mode: lighten;
+      background-repeat: no-repeat;
+    }
+
+    & .gradient {
+      position: fixed;
+      width: 100%;
+      height: 731px;
+      left: 0;
+      top: 81px;
+      background-image: linear-gradient(180deg, #0A1157 0%, rgba(10, 17, 87, 0.73) 27.68%, rgba(10, 17, 87, 0.94) 51.12%, #0A1157 80.76%, #0A1157 100%);
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      z-index: 2;
+    }
+
+    & .redSpots {
+      position: absolute;
+      width: 234px;
+      height: 497px;
+      left: 59px;
+      top: -254px;
+      background-image: url("../../public/Profile/redSpots.png");
+      z-index: 3;
+      transform: rotate(102.2deg);
+    }
+
+    & .ellipse {
+      position: absolute;
+      width: 369px;
+      height: 352px;
+      left: 110px;
+      top: 373px;
+      background: $hot_pink;
+      z-index: 4;
+      opacity: 0.4;
+      filter: blur(500px);
+    }
+
+  }
+
+
+
+  & .floor1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    z-index: 2;
+
+    & svg{
+      position: relative;
+      z-index: 2;
+    }
+
+    & .map_gradient{
+      position: absolute;
+      width: 1177px;
+      height: 100%;
+      top: 81px;
+      background-image: linear-gradient(180deg, rgba(10, 17, 87, 0.75) 0%, rgba(10, 17, 87, 0.73) 43.72%, rgba(10, 17, 87, 0.67) 76.39%, #0A1157 92.73%, #0A1157 100%);
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      z-index: 3;
+    }
+
+
+  }
+
+  .content {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+
+
+    & .rating_select{
+      margin-top: 29px;
+      width: 100%;
+      height: 46px;
+      background: #2C326F;
+      border-radius: 12px;
+      padding: 4px;
+      @include display-flex(space-between);
+
+      & .options{
+        width: 138px;
+        height: 100%;
+        border-radius: 12px;
+        @include fonts(400, 16px, 19px, #777777);
+        @include display-flex;
+      }
+
+      & .active_options{
+        background: #101353;
+        color: white;
+      }
+    }
+
+    & .rules{
+      margin-top: 10px;
+      width: 100%;
+      height: 46px;
+      @include display-flex(space-between);
+      padding: 0 18px 0 16px;
+      background: rgba(227, 232, 237, .5);
+      border-radius: 12px;
+      border: none;
+      @include fonts(400, 14px, 16px, rgba(255, 255, 255, 0.79));
+      letter-spacing: 0.0264em;
+      cursor: pointer;
+
+      & svg{
+        color: white;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    & .rating_list {
+      margin-top: 10px;
+
+      & .title {
+        @include display-flex(space-between);
+        border-bottom: 1px solid $light-background;
+
+        & span {
+          @include fonts(400, 14px, 29px, white);
+        }
+      }
+
+      & .list{
+        margin-top: 7px;
+        width: 100%;
+        @include display-flex(flex-start);
+        flex-direction: column;
+
+        & .item{
+          margin: 5px 0;
+          width: 100%;
+          height: 49px;
+          background: $light-background;
+          box-shadow: 0 0 33px rgba(34, 34, 44, 0.245528);
+          border-radius: 6px;
+          padding: 0 15px 0 12px;
+          @include display-flex(space-between);
+
+          & .left{
+            @include display-flex(flex-start);
+
+            & .index{
+              @include fonts(400, 14px, 29px, white);
+              margin-right: 13px;
+            }
+
+            & .images{
+              width: 29px;
+              height: 29px;
+              border-radius: 50%;
+              overflow: hidden;
+            }
+
+            & .name{
+              @include fonts(400, 14px, 16px, white);
+              letter-spacing: 0.291667px;
+              margin-left: 22px;
+            }
+          }
+
+          & .right{
+            @include display-flex(flex-start);
+            @include fonts(400, 14px, 16px, $diamond_dust);
+
+            & svg{
+              margin-right: 4px;
+            }
+          }
+        }
+
+        & .active_item{
+          margin: 10px -13px;
+          width: calc(100% + 26px);
+          height: 53px;
+          border: 1px solid #FE3F8E;
+          box-shadow: 0 0 33px rgba(34, 34, 44, 0.245528);
+        }
+      }
+    }
+
+    & .program{
+      margin-top: 22px;
+
+      & h2{
+        @include fonts(500, 16px, 19px, white);
+        text-align: left;
+      }
+
+      & .days{
+        margin-top: 19px;
+        @include display-flex;
+        gap: 6%;
+
+        & .item_day{
+          width: 47%;
+          height: 59px;
+          border: 1px solid $diamond_dust;
+          border-radius: 10px;
+          @include display-flex;
+          gap: 16px;
+
+          & .left{
+            @include display-flex;
+            flex-direction: column;
+
+            & span:first-child{
+              @include fonts(400, 14px, 16px, rgba(255, 255, 255, .6));
+            }
+            & span:last-child{
+              margin-top: 6px;
+              @include fonts(600, 16px, 18px, rgba(255, 255, 255, 1));
+            }
+          }
+
+          & .right{
+            @include fonts(600, 16px, 18px, rgba(255, 255, 255, 1));
+          }
+        }
+
+        & .active_day{
+          background: #2C326F;
+          mix-blend-mode: normal;
+          opacity: 0.4;
+        }
+      }
+
+      & .timetable{
+        & .item_time{
+          margin-top: 19px;
+          & h3{
+            @include fonts(400, 14px, 20px, #A9A4C2);
+          }
+
+          & p{
+            margin-top: 7px;
+            @include fonts(400, 16px, 27px, #CECBE0);
+          }
+        }
+      }
+    }
+
+    & .event_map{
+      margin-top: 14px;
+      position: relative;
+      width: 100%;
+      z-index: 2;
+
+      & select{
+        all: unset;
+        width: calc(100% - 20px);
+        height: 56px;
+        background: rgba(120, 129, 148, 0.28);
+        border-radius: 12px;
+        padding: 0 0 0 19px;
+        @include display-flex;
+        @include fonts(400, 16px, 24px, #C4D2DF);
+
+        & option{
+          all: unset;
+          @include fonts(400, 16px, 24px, #C4D2DF);
+          background: $background-color;
+          letter-spacing: 0.2px;
+          border-radius: 12px;
+          border: none;
+        }
+      }
+    }
+  }
+}

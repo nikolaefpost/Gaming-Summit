@@ -1,0 +1,297 @@
+@import "mixins";
+@import "colors";
+
+.content{
+  width: 100%;
+  height: auto;
+  position: relative;
+  background: $background-color;
+  overflow: hidden;
+
+
+
+  & .ellipse1, .ellipse2{
+    position: absolute;
+    width: 558px;
+    height: 528.74px;
+    background: rgba(254, 63, 142, .4);
+    filter: blur(500px);
+    z-index: 3;
+  }
+
+  & .ellipse1{
+    left: -193px;
+    top: 354.39px;
+  }
+
+  & .ellipse2{
+    //right: -194px;
+    left: 1236px;
+    top: 147.82px;
+  }
+
+  & .red_spots{
+    position: absolute;
+    width: 1318px;
+    height: 1400px;
+    top: 951px;
+    background: url("../public/red_spots.png");
+    background-size: 100%;
+    z-index: 3;
+  }
+
+  & .white_shadow{
+    position: absolute;
+    width: 1427px;
+    height: 1500px;
+    top: 959px;
+    left: -250px;
+    background-size: 100%;
+    z-index: 3;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(13, 19, 87, 0.29), rgba(13, 19, 87, 0.29)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../public/white_shadow.png");
+    mix-blend-mode: lighten;
+    background-position: left top;
+    background-repeat: no-repeat;
+  }
+
+  & .anything_text{
+    position: absolute;
+    width: 2600px;
+    height: 223px;
+    top: 907px;
+    left: 267px;
+    @include fonts(400, 222px, 222px, rgba(255, 255, 255, 0.05));
+    letter-spacing: 5.56105px;
+    text-transform: uppercase;
+    z-index: 3;
+  }
+
+  & .smoke2{
+    position: absolute;
+    width: 1459px;
+    height: 757px;
+    top: 2721px;
+    left: -88px;
+    background-size: 100%;
+    z-index: 21;
+    background-image: url("../public/smoke.png");
+    mix-blend-mode: hard-light;
+    opacity: 0.1;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    background-position: left top;
+    background-repeat: no-repeat;
+  }
+
+  & .smoke3{
+    position: absolute;
+    width: 1026px;
+    height: 446px;
+    top: 3006px;
+    left: 379px;
+    background-size: 100%;
+    z-index: 21;
+    background-image: url("../public/smoke.png");
+    mix-blend-mode: hard-light;
+    opacity: 0.1;
+    background-position: left top;
+    background-repeat: no-repeat;
+  }
+  & .smoke7{
+    position: absolute;
+    width: 1726px;
+    height: 546px;
+    bottom: 20px;
+    left: 0;
+    background-size: cover;
+    z-index: 41;
+    background-image: url("../public/smoke.png");
+    mix-blend-mode: hard-light;
+    opacity: .1;
+    background-position: 0 65%;
+    background-repeat: no-repeat;
+  }
+
+  & .smoke8{
+    position: absolute;
+    width: 1726px;
+    height: 596px;
+    top: 4853px;
+    left: 481px;
+    background-size: cover;
+    z-index: 1;
+    background-image: url("../public/smoke.png");
+    opacity: .1;
+    background-position: 0 65%;
+    background-repeat: no-repeat;
+  }
+
+  & .smoke9{
+    position: absolute;
+    width: 1026px;
+    height: 446px;
+    top: 5895px;
+    right: 0;
+    background-size: cover;
+    z-index: 1;
+    background-image: url("../public/smoke.png");
+    opacity: .1;
+    background-position:  50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  & .smoke10{
+    position: absolute;
+    width: 1900px;
+    height: 844px;
+    right: 0;
+    top: 3700px;
+    background-image: url("../public/smoke.png");
+    mix-blend-mode: hard-light;
+    opacity: 0.2;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    z-index: 21;
+  }
+
+  & .red_spots_all1{
+    position: absolute;
+    width: 1860px;
+    height: 3239px;
+    top: 3131px;
+    left: -155px;
+    background-size: cover;
+    z-index: 1;
+    background-image: url("../public/red_spots2.png");
+    //background-position: 0 65%;
+    background-repeat: no-repeat;
+    transform: rotate(-180deg);
+  }
+
+
+
+  @media screen and (max-width: 500px){
+
+    & .ellipse1, .ellipse2{
+      position: absolute;
+      background: rgba(254, 63, 142, .4);
+      filter: blur(500px);
+      z-index: 4;
+    }
+
+    & .ellipse1{
+      width: 219px;
+      height: 208px;
+      left: auto;
+      right: -70px;
+      top: 17px;
+    }
+
+    & .ellipse2{
+      width: 263px;
+      height: 249px;
+      left: -75px;
+      top: 211px;
+    }
+
+    & .red_spots{
+      position: absolute;
+      width: 680px;
+      height: 964px;
+      top: 828px;
+      left: -181px;
+      background: url("../public/red_spots.png");
+      background-size: 100%;
+      z-index: 4;
+    }
+
+    & .white_shadow{
+      position: absolute;
+      width: 802px;
+      height: 1075px;
+      top: 684px;
+      left: -396px;
+      background-size: auto 100%;
+      z-index: 4;
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(13, 19, 87, 0.29), rgba(13, 19, 87, 0.29)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../public/white_shadow.png");
+      mix-blend-mode: lighten;
+      background-position: left top;
+      background-repeat: no-repeat;
+    }
+
+    & .anything_text{
+      position: absolute;
+      width: 1169px;
+      height: 223px;
+      top: 684px;
+      left: 16px;
+      @include fonts(400, 96px, 222px, rgba(255, 255, 255, 0.05));
+      letter-spacing: 5.56105px;
+      text-transform: uppercase;
+      z-index: 4;
+    }
+
+    & .smoke2{
+      position: absolute;
+      width: 1459px;
+      height: 757px;
+      top: 2291px;
+      left: -268px;
+      background-size: 100%;
+      z-index: 21;
+      background-image: url("../public/smoke.png");
+      mix-blend-mode: hard-light;
+      opacity: 0.2;
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      background-position: left top;
+      background-repeat: no-repeat;
+    }
+
+    & .smoke3{
+      position: absolute;
+      width: 1026px;
+      height: 446px;
+      top: 2746px;
+      left: -100px;
+      background-size: 100%;
+      z-index: 19;
+      background-image: url("../public/smoke.png");
+      mix-blend-mode: hard-light;
+      opacity: 0.2;
+      background-position: left top;
+      background-repeat: no-repeat;
+    }
+
+    & .smoke8{
+      position: absolute;
+      width: 1726px;
+      height: 596px;
+      top: 4453px;
+      left: 0;
+      background-size: cover;
+      z-index: 1;
+      background-image: url("../public/smoke.png");
+      opacity: .1;
+      background-position: 0 65%;
+      background-repeat: no-repeat;
+    }
+
+    & .red_spots_all1{
+      position: absolute;
+      width: 100%;
+      height: 3239px;
+      top: 3631px;
+      left: 0;
+      background-size: cover;
+      z-index: 1;
+      background-image: url("../public/red_spots2.png");
+      //background-position: 0 65%;
+      background-repeat: no-repeat;
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.img_content{
+  @include display-flex;
+}

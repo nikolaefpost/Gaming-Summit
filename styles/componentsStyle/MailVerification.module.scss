@@ -1,0 +1,151 @@
+@import "styles/mixins";
+@import "styles/colors";
+
+.code{
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  padding: 0 24px;
+
+  & h2{
+    @include fonts(600, 28px, 33px, #FFFFFF);
+  }
+
+  & p{
+    margin-top: 10px;
+    @include fonts(400, 14px, 20px, rgba(255, 255, 255, 0.85));
+  }
+
+  & .clock{
+    margin-top: 40px;
+    @include display-flex(flex-start);
+    position: relative;
+
+    & span{
+      margin-left: 10px;
+      @include fonts(700, 16px, 22px, $diamond_dust);
+    }
+
+    & .error_label{
+      position: absolute;
+      right: 0;
+      @include fonts(400, 12px, 17px, $hot_pink);
+    }
+  }
+
+  & .input_block{
+    margin-top: 10px;
+    @include display-flex;
+    gap: 16px;
+
+    & input{
+      width: 70px;
+      height: 60px;
+      border-radius: 16px;
+      background: #2C326F;
+      padding: 16px 26px;
+      @include fonts(700, 24px, 28px, white);
+      letter-spacing: -0.005em;
+    }
+
+    & .is_focus{
+      border: 1px solid #FFFFFF;
+    }
+  }
+
+  & .is_error{
+    & input{
+      border: 1px solid $hot_pink!important;
+    }
+  }
+
+  & .resend{
+    margin: 19px 0 50px;
+    text-align: right;
+    & span{
+      @include fonts(600, 14px, 20px, white);
+    }
+  }
+
+  & .password1, .password2{
+    margin-top: 34px;
+    width: 100%;
+    height: 64px;
+    background: #2C326F;
+    border-radius: 16px;
+    padding: 0 48px;
+    @include display-flex;
+    position: relative;
+
+    & .error{
+      position: absolute;
+      width: 100%;
+      top: -18px;
+      left: 0;
+      text-align: right;
+      padding-right: 9px;
+      @include fonts(400, 12px, 17px, $hot_pink);
+    }
+
+    & .icon{
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 20px;
+      left: 16px;
+      z-index: 1;
+    }
+
+    & .hide{
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 20px;
+      right: 16px;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    & input{
+      all: unset;
+      width: 100%;
+      @include fonts(400, 14px, 16px, #FFFFFF);
+      border: none;
+      background: transparent;
+      cursor: pointer;
+
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px #2C326F inset;
+        -webkit-text-fill-color: white!important;
+      }
+
+      &::placeholder {
+        @include fonts(400, 14px, 16px, #A3B1D0);
+      }
+    }
+  }
+
+  & .password2{
+    margin: 24px 0 85px;
+
+    & .match{
+      position: absolute;
+      top: 74px;
+      right: 0;
+      @include fonts(400, 12px, 17px, $hot_pink);
+    }
+  }
+
+
+
+  & button{
+    width: 100%;
+    height: 59px;
+    background: #FE3F8E;
+    border-radius: 16px;
+    @include display-flex;
+    border: none;
+    @include fonts(400, 16px, 19px, #FFFFFF);
+    cursor: pointer;
+  }
+}

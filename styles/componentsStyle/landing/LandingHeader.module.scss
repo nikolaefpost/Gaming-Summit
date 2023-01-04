@@ -1,0 +1,292 @@
+@import "styles/mixins";
+@import "styles/colors";
+
+.wraper{
+  background: transparent;
+  position: relative;
+  padding: 166px 0 194px;
+  display: block;
+  z-index: 1;
+
+  & .first_gradient{
+    position: absolute;
+    height: 389px;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index: 1;
+    background: linear-gradient(180deg, #0A1157 23.79%, rgba(10, 17, 87, 0.8) 39.87%, rgba(10, 17, 87, 0.29) 65.4%, rgba(10, 17, 87, 0.1) 80.76%, rgba(10, 17, 87, 0) 100%);
+  }
+
+  & .second_gradient{
+    position: absolute;
+    height: 731px;
+    width: 100%;
+    top: 300px;
+    background: linear-gradient(180deg, #0A1157 0%, rgba(10, 17, 87, 0.8) 27.68%, rgba(10, 17, 87, 0.5) 54.98%, rgba(10, 17, 87, 0.1) 80.76%, rgba(10, 17, 87, 0) 100%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    z-index: 3;
+  }
+
+  & .third_gradient{
+    display: none;
+  }
+
+  & .first_background{
+    position: absolute;
+    height: 1030px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(278.25deg, rgba(10, 17, 87, 0.2) 8.97%, rgba(14, 16, 84, 0.2) 87.64%), linear-gradient(280.1deg, #0F1054 10.93%, rgba(10, 17, 87, 0) 88.69%), linear-gradient(0deg, rgba(254, 63, 142, 0.15), rgba(254, 63, 142, 0.15)),  url("../../../public/background1.png");
+    background-size: cover;
+  }
+
+  & .woman_warrior{
+    position: absolute;
+    width: 537px;
+    height: 887px;
+    right: 15px;
+    top: 143px;
+    z-index: 2;
+    background: url("../../../public/woman_warrior.png");
+    mix-blend-mode: hard-light;
+    background-size: 100%;
+
+    & .woman_shadow{
+      position: absolute;
+      width: 353px;
+      height: 777px;
+      left: 85px;
+      top: 31px;
+      z-index: 3;
+      background: no-repeat center url("../../../public/silhouette.png");
+      background-size: auto 115%;
+    }
+  }
+
+  & .header{
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    z-index: 10;
+    @include display-flex(flex-start);
+    flex-direction: column;
+    background: transparent;
+
+    & .logo_desctop{
+      display: block;
+    }
+
+    & .logo_mobil{
+      display: none;
+    }
+
+
+    & h1{
+      margin-top: 33px;
+      //width: 918px;
+      //height: 200px;
+      @include fonts(500, 84px, 110px, #FFFFFF);
+      text-align: center;
+
+      & span{
+        @include fonts(500, 84px, 110px, $hot_pink);
+      }
+    }
+    & h2{
+      margin-top: 6px;
+      @include fonts(500, 84px, 110px, $hot_pink);
+    }
+
+    & h3{
+      margin-top: 33px;
+      @include fonts(400, 28px, 39px, #FFFFFF);
+      letter-spacing: -0.04em;
+    }
+
+    & .buttons{
+      margin-top: 52px;
+      @include display-flex;
+      gap: 22px;
+
+      & .item{
+        //width: 280px;
+        height: 65px;
+        border-radius: 8px;
+        border: none;
+        padding: 19px 28px;
+        @include fonts(500, 23px, 26px, #FFFFFF);
+        letter-spacing: 0.42px;
+        cursor: pointer;
+      }
+
+      & .item:nth-child(1){
+        background: $hot_pink;
+        transition: all .5s ease-in-out;
+
+        &:hover{
+          background: transparent;
+          border: 1px solid $hot_pink;
+        }
+      }
+
+      & .item:nth-child(2){
+        background: $hot_pink;
+      }
+
+      & .item:last-child{
+        border: 1px solid $hot_pink;
+        background: transparent;
+        transition: all .5s ease-in-out;
+
+        &:hover{
+          background: $hot_pink;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px){
+    background: transparent;
+    position: relative;
+    padding: 190px 0 87px;
+    z-index: 3;
+
+    & .first_gradient{
+      height: 301px;
+      z-index: 3;
+      background: linear-gradient(180deg, #0A1157 23.79%, rgba(10, 17, 87, 0.8) 39.87%, rgba(10, 17, 87, 0.29) 65.4%, rgba(10, 17, 87, 0.1) 80.76%, rgba(10, 17, 87, 0) 100%);
+    }
+
+    & .second_gradient{
+      position: absolute;
+      height: 486px;
+      width: 100%;
+      top: 404px;
+      background: linear-gradient(191.01deg, #0A1157 5.39%, rgba(9, 16, 82, 0.92) 24.43%, rgba(10, 17, 87, 0.4) 52.93%, rgba(10, 17, 87, 0.1) 75.22%, rgba(10, 17, 87, 0) 91.86%);
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      z-index: 3;
+    }
+
+    & .third_gradient{
+      display: block;
+      position: absolute;
+      height: 486px;
+      width: 100%;
+      top: 404px;
+      background: linear-gradient(191.01deg, #0A1157 5.39%, rgba(9, 16, 82, 0.92) 24.43%, rgba(10, 17, 87, 0.4) 52.93%, rgba(10, 17, 87, 0.1) 75.22%, rgba(10, 17, 87, 0) 91.86%);
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      z-index: 3;
+    }
+
+    & .first_background{
+      position: absolute;
+      height: 890px;
+      width: 1576px;
+      top: 0;
+      left: -496px;
+      z-index: 2;
+      background: linear-gradient(278.25deg, rgba(10, 17, 87, 0.2) 8.97%, rgba(14, 16, 84, 0.2) 87.64%), linear-gradient(280.1deg, #0F1054 10.93%, rgba(10, 17, 87, 0) 88.69%), linear-gradient(0deg, rgba(254, 63, 142, 0.15), rgba(254, 63, 142, 0.15)),  url("../../../public/background1.png");
+      background-size: cover;
+    }
+
+    & .woman_warrior{
+      position: absolute;
+      width: 355px;
+      height: 585px;
+      right: -107px;
+      top: 235px;
+      z-index: 2;
+      background: url("../../../public/woman_warrior.png");
+      mix-blend-mode: hard-light;
+      background-size: 100%;
+
+      & .woman_shadow{
+        position: absolute;
+        width: 226px;
+        height: 497px;
+        left: auto;
+        right: 70px;
+        top: 27px;
+        z-index: 3;
+        background: no-repeat center url("../../../public/silhouette.png");
+        //background-size: 100%;
+        background-size: auto 115%;
+      }
+    }
+
+    & .header{
+      width: 100%;
+      @include display-flex;
+
+      & .logo_desctop{
+        display: none;
+      }
+
+      & .logo_mobil{
+        display: block;
+      }
+
+      & h1{
+        margin: 16px auto 0;
+        width: 320px;
+        height: auto;
+        @include fonts(500, 34px, 35px, #FFFFFF);
+
+        & span{
+          @include fonts(500, 34px, 35px, $hot_pink);
+        }
+      }
+      & h2{
+        margin-top: 8px;
+        @include fonts(500, 34px, 35px, $hot_pink);
+      }
+
+      & h3{
+        margin-top: 21px;
+        @include fonts(400, 15px, 21px, #FFFFFF);
+        text-align: center;
+      }
+
+      & h3:last-child{
+        margin-top: 16px;
+      }
+
+      & .buttons{
+        width: 100%;
+        margin-top: 20px;
+        @include display-flex;
+        gap: 17px;
+
+        & .item{
+          //min-width: 129px;
+          padding: 7px 23px;
+          width: auto;
+          height: 41px;
+          @include fonts(500, 15px, 26px, #FFFFFF);
+        }
+
+      }
+    }
+  }
+}
+
+.desktop{
+  display: block!important;
+}
+
+.mobil{
+  display: none!important;
+}
+
+@media screen and (max-width: 500px){
+  .desktop{
+    display: none!important;
+  }
+
+  .mobil{
+    display: block!important;
+  }
+}
