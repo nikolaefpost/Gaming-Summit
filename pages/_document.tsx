@@ -3,7 +3,7 @@ import React from "react";
 
 import { GA_TRACKING_ID } from "../utils/gtag";
 
-const path = "https://fienta.com/embed.js";
+// const path = "https://fienta.com/embed.js";
 
 export default class MyDocument extends Document {
   render() {
@@ -30,13 +30,7 @@ export default class MyDocument extends Document {
             name="twitter:image"
             content="https://tallinngamingsummit.com/tgs.png"
           />
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
 
-          <script src={path} />
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
           <script
             dangerouslySetInnerHTML={{
               __html: `

@@ -48,6 +48,7 @@ const PasswordVerification: React.FC = () => {
   const handleSubmitPassword: SubmitHandler<IPassword> = (data) => {
     if (data.password1 !== data.password2)
       setError("total", { message: "passwords do not match!" });
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     else router.push("/");
   };
 

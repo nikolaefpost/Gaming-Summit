@@ -7,11 +7,11 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import instagram from "../../../assets/icon/landing/instagramIcon.svg";
 import { useLanguage } from "../../../context";
 import {
-  cardImage1_1,
   cardImage2,
-  cardImage3_1,
   cardImage4,
   cardImage5,
+  cardImage11,
+  cardImage31,
 } from "../../../public/CardImg";
 import styles from "../../../styles/componentsStyle/landing/Speakers.module.scss";
 
@@ -22,7 +22,7 @@ const Speakers: NextPage = () => {
       id: 0,
       name: text[34] || "Vlad Marinescu",
       position: text[33] || "VP of customer",
-      img: cardImage1_1,
+      img: cardImage11,
       href: "https://www.linkedin.com/in/svmarinescu/",
     },
     {
@@ -36,7 +36,7 @@ const Speakers: NextPage = () => {
       id: 2,
       name: text[76] || "Philip Wride",
       position: text[77] || "Cheesecake Digital",
-      img: cardImage3_1,
+      img: cardImage31,
       href: "https://www.linkedin.com/in/philipwride/?originalSubdomain=ae",
     },
     {

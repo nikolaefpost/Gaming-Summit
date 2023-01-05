@@ -22,6 +22,12 @@ interface INavbar {
   label: string;
 }
 
+interface ILabel {
+  label: string;
+  icon: string;
+  value: string;
+}
+
 const Navbar: React.FC<INavbar> = ({ label }) => {
   const { text, onChangeLang, lang } = useLanguage();
   console.log(lang);
@@ -62,9 +68,12 @@ const Navbar: React.FC<INavbar> = ({ label }) => {
     // },
   ];
 
-  const lang_label = [
+  const langLabel: ILabel[] = [
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     { label: "Russia", icon: russia, value: "Rus" },
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     { label: "Estonia", icon: estonia, value: "Est" },
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     { label: "USA", icon: usa, value: "Eng" },
   ];
 
@@ -156,13 +165,13 @@ const Navbar: React.FC<INavbar> = ({ label }) => {
         </div>
         {isLangOpen && (
           <div className={styles.modal_language}>
-            {lang_label.map((item) => (
+            {langLabel.map((item) => (
               <div
                 key={item.label}
                 className={styles.items}
                 onClick={() => onLanguage(item.value)}
               >
-                <Image src={item.icon as string} alt="country" />
+                <Image src={item.icon} alt="country" />
                 <div className={styles.label}>{item.label}</div>
               </div>
             ))}

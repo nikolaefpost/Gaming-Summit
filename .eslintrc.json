@@ -114,6 +114,7 @@
       {
         "checksVoidReturn": false
       }
-    ]
+    ],
+    "@typescript-eslint/no-unsafe-assignment": "error"
   }
 }
