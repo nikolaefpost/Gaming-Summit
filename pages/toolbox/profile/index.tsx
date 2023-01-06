@@ -14,11 +14,10 @@ import {
   NoImageIcon,
   PointIcon,
   PrivacyIcon,
-} from "@/../assets/icon/Profile";
-import { useSingleImage } from "@/../helpers/useInput";
-import styles from "@/../styles/componentsStyle/Profile.module.scss";
-
+} from "../../../assets/icon/Profile";
 import Layout from "../../../components/Layout";
+import { useSingleImage } from "../../../helpers/useInput";
+import styles from "../../../styles/componentsStyle/Profile.module.scss";
 
 const Profile: NextPage = () => {
   const male = true;
