@@ -7,7 +7,7 @@ import { INavData } from "@/../types";
 
 // import { BiChevronDown } from "react-icons/bi";
 import {
-  // arrowUpRight,
+  arrowUpRight,
   globeIcon,
   menuIcon,
 } from "../../../assets/icon/landing";
@@ -33,6 +33,7 @@ const Navbar: React.FC<INavbar> = ({ label }) => {
   console.log(lang);
   // console.log(lang)
   // const {data: session} = useSession();
+  const [session, setSession] = useState(false)
   const navData: INavData[] = [
     { id: 0, title: text[1], href: "#why", outerHref: "/", isHover: true },
     {
@@ -59,13 +60,20 @@ const Navbar: React.FC<INavbar> = ({ label }) => {
       href: "#about",
       isHover: false,
     },
-    // {
-    //   id: 5,
-    //   title: text[78] || "News",
-    //   href: "#news",
-    //   outerHref: "/news",
-    //   isHover: false,
-    // },
+    {
+      id: 5,
+      title: text[78] || "News",
+      href: "#news",
+      outerHref: "/news",
+      isHover: false,
+    },
+    {
+      id: 6,
+      title: "Login",
+      href: "#login",
+      outerHref: "/auth/login",
+      isHover: false,
+    },
   ];
 
   const langLabel: ILabel[] = [
@@ -135,22 +143,22 @@ const Navbar: React.FC<INavbar> = ({ label }) => {
         ))}
       </div>
       <div className={styles.right}>
-        {/* <Link href="auth/registration"> */}
-        {/*  <a> */}
-        {/*    {text[6] || "Join now"} */}
-        {/*    <Image src={arrowUpRight as string} /> */}
-        {/*  </a> */}
-        {/* </Link> */}
-        {/* {session ? */}
-        {/*  <button onClick={()=> signOut()}> */}
-        {/*    Log out */}
-        {/* </button>: */}
-        {/*  <Link href="/api/auth/signin"> */}
-        {/*    <a> */}
-        {/*      Sign in */}
-        {/*    </a> */}
-        {/*  </Link> */}
-        {/* } */}
+        {!session && <Link href="auth/registration">
+          <a>
+            Registration
+            <Image src={arrowUpRight as string}/>
+          </a>
+        </Link>}
+         {session ?
+          <button onClick={()=> setSession(false)}>
+            Log out
+         </button>:
+          <Link href="/auth/login">
+            <a>
+              Sign in
+            </a>
+          </Link>
+         }
 
         {/* {session?.user?.name === "Alex" && <Link href="/api/auth/signin"> */}
         {/*  <a> */}

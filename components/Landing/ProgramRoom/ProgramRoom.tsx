@@ -29,7 +29,6 @@ const ProgramRoom = () => {
   };
 
   const onNext = (): void => {
-    console.log(count < programData.length - 1);
     if (count < programData.length - 1) setCount((prev) => prev + 1);
   };
 

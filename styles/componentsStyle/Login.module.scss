@@ -13,6 +13,10 @@
   overflow: hidden;
   padding: 352px 0 53px;
 
+  @media screen and (min-width: 500px){
+    @include display-flex;
+  }
+
   & .background {
     position: absolute;
     width: 100%;
@@ -31,6 +35,10 @@
     background-position: 55% 0;
     z-index: 2;
     background-repeat: no-repeat;
+
+    @media screen and (min-width: 500px){
+      height: calc(100vh - 142px);
+    }
   }
 
   & .background1 {
@@ -265,6 +273,11 @@
     & .error_input {
       border: 1px solid $hot_pink;
     }
+
+    //@media screen and (min-width: 500px){
+    //  width: 500px;
+    //
+    //}
   }
 
   & .login_registration {
@@ -318,6 +331,12 @@
 
       & span {
         @include fonts(400, 14px, 16px, #ffffff);
+      }
+    }
+    @media screen and (min-width: 500px){
+      width: 500px;
+      & h2 {
+        text-align: center;
       }
     }
   }
@@ -380,6 +399,11 @@
       border: none;
       @include fonts(400, 16px, 19px, #ffffff);
       cursor: pointer;
+    }
+
+    @media screen and (min-width: 500px){
+    width: 500px;
+
     }
   }
 
