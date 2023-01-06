@@ -7,7 +7,7 @@ import { GetStaticPaths, GetStaticProps } from "next/types";
 import React from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
 
-import styles from "@/../styles/componentsStyle/News.module.scss";
+import styles from "../../../styles/componentsStyle/News.module.scss";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import {
