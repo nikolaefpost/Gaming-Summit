@@ -30,8 +30,6 @@ interface ILabel {
 
 const Navbar: React.FC<INavbar> = ({ label }) => {
   const { text, onChangeLang, lang } = useLanguage();
-  console.log(lang);
-  // console.log(lang)
   // const {data: session} = useSession();
   const [session, setSession] = useState(false);
   const navData: INavData[] = [
@@ -158,6 +156,12 @@ const Navbar: React.FC<INavbar> = ({ label }) => {
         ) : (
           <Link href="/auth/login">
             <a>Sign in</a>
+          </Link>
+        )}
+
+        {!session && (
+          <Link href="/toolbox/profile">
+            <a>profile</a>
           </Link>
         )}
 
