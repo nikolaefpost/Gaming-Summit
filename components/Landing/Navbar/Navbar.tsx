@@ -33,7 +33,7 @@ const Navbar: React.FC<INavbar> = ({ label }) => {
   console.log(lang);
   // console.log(lang)
   // const {data: session} = useSession();
-  const [session, setSession] = useState(false)
+  const [session, setSession] = useState(false);
   const navData: INavData[] = [
     { id: 0, title: text[1], href: "#why", outerHref: "/", isHover: true },
     {
@@ -143,22 +143,23 @@ const Navbar: React.FC<INavbar> = ({ label }) => {
         ))}
       </div>
       <div className={styles.right}>
-        {!session && <Link href="auth/registration">
-          <a>
-            Registration
-            <Image src={arrowUpRight as string}/>
-          </a>
-        </Link>}
-         {session ?
-          <button onClick={()=> setSession(false)}>
-            Log out
-         </button>:
-          <Link href="/auth/login">
+        {!session && (
+          <Link href="auth/registration">
             <a>
-              Sign in
+              Registration
+              <Image src={arrowUpRight as string} />
             </a>
           </Link>
-         }
+        )}
+        {session ? (
+          <button type="button" onClick={() => setSession(false)}>
+            Log out
+          </button>
+        ) : (
+          <Link href="/auth/login">
+            <a>Sign in</a>
+          </Link>
+        )}
 
         {/* {session?.user?.name === "Alex" && <Link href="/api/auth/signin"> */}
         {/*  <a> */}

@@ -144,7 +144,7 @@
     }
   }
 
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 500px) {
     padding: 0 18px;
 
     & .content {
@@ -167,7 +167,6 @@
       }
 
       & .slider {
-
         & .card {
           margin-top: 40px;
           @include display-flex;
@@ -192,7 +191,6 @@
 
                 &:after {
                   top: 12px;
-
                 }
               }
             }

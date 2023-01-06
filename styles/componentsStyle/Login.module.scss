@@ -13,7 +13,7 @@
   overflow: hidden;
   padding: 352px 0 53px;
 
-  @media screen and (min-width: 500px){
+  @media screen and (min-width: 500px) {
     @include display-flex;
   }
 
@@ -36,7 +36,7 @@
     z-index: 2;
     background-repeat: no-repeat;
 
-    @media screen and (min-width: 500px){
+    @media screen and (min-width: 500px) {
       height: calc(100vh - 142px);
     }
   }
@@ -333,7 +333,7 @@
         @include fonts(400, 14px, 16px, #ffffff);
       }
     }
-    @media screen and (min-width: 500px){
+    @media screen and (min-width: 500px) {
       width: 500px;
       & h2 {
         text-align: center;
@@ -401,9 +401,8 @@
       cursor: pointer;
     }
 
-    @media screen and (min-width: 500px){
-    width: 500px;
-
+    @media screen and (min-width: 500px) {
+      width: 500px;
     }
   }
 
