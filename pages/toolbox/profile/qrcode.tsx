@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import Image from "next/image";
 import React from "react";
 
-import qrCode from "@/../public/Profile/qr_code.png";
+import qrCode from "../../../public/Profile/qr_code.png";
 
 import Layout from "../../../components/Layout";
 import styles from "../../../styles/componentsStyle/Profile.module.scss";
