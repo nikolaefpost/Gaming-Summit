@@ -7,7 +7,6 @@ import { GetStaticPaths, GetStaticProps } from "next/types";
 import React from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
 
-import styles from "../../../styles/componentsStyle/News.module.scss";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import {
@@ -22,6 +21,7 @@ import client from "../../../contentfulClient/index";
 import { useLanguage } from "../../../context";
 import { useMediaQuery } from "../../../helpers/useMedia";
 import ticket from "../../../public/News/news_ticket.png";
+import styles from "../../../styles/componentsStyle/News.module.scss";
 
 interface IArticle {
   data: INewArticle;
