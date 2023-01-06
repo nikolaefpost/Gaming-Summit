@@ -13,9 +13,9 @@ import {
 } from "../../../assets/icon/landing";
 import { estonia, russia, usa } from "../../../assets/icon/navbar";
 import { useLanguage } from "../../../context";
-import styles from "../../../styles/componentsStyle/landing/Navbar.module.scss";
 import MobilMenu from "../MobilMenu";
 
+import styles from "../../../styles/componentsStyle/landing/Navbar.module.scss";
 // import {signOut, useSession} from "next-auth/react";
 
 interface INavbar {
