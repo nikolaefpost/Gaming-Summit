@@ -108,7 +108,7 @@
 
   & .block_links {
     width: 100%;
-    height: 44%;
+    height: 50%;
     margin: 0 29px;
     padding-top: 84px;
     position: relative;
@@ -196,12 +196,13 @@
     position: relative;
     z-index: 1005;
     width: 100%;
-    height: 46%;
+    height: 50%;
     padding: 29px 29px 43px;
 
     & .ticket {
       @include display-flex(space-between);
       gap: 8px;
+      padding-top: 16px;
 
       & h2 {
         width: 174px;
@@ -226,7 +227,7 @@
     }
 
     & .support {
-      margin-top: 60px;
+      margin-top: 20px;
 
       & h2 {
         @include fonts(700, 18px, 24px, #ffffff);
@@ -240,7 +241,7 @@
     }
 
     & .priority {
-      margin-top: 60px;
+      margin-top: 40px;
 
       & h2 {
         @include fonts(700, 18px, 27px, #ffffff);
