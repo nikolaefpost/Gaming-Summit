@@ -1,11 +1,13 @@
 import { NextPage } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { RiCloseFill } from "react-icons/ri";
 
 import { INavData } from "@/../types";
 
 import {
+  arrowUpRight,
   facebookIcon,
   instaIcon,
   linkedinIcon,
@@ -16,6 +18,8 @@ import styles from "../../../styles/componentsStyle/landing/MobilMenu.module.scs
 interface IMobilMenu {
   navItem: INavData[];
   onClose: () => void;
+  session: boolean;
+  setSession: (session: boolean) => void;
 }
 
 interface ISocial {
@@ -43,7 +47,12 @@ const social: ISocial[] = [
   },
 ];
 
-const MobilMenu: NextPage<IMobilMenu> = ({ navItem, onClose }) => {
+const MobilMenu: NextPage<IMobilMenu> = ({
+  navItem,
+  onClose,
+  session,
+  setSession,
+}) => {
   const { text } = useLanguage();
   return (
     <div className={styles.menu}>
@@ -77,12 +86,29 @@ const MobilMenu: NextPage<IMobilMenu> = ({ navItem, onClose }) => {
       <div className={styles.line} />
       <div className={styles.footer}>
         <div className={styles.ticket}>
-          <h2>
-            {text[63] || "Come enjoy the event with us"} {text[64]} {text[65]}
-          </h2>
-          <a href="https://fienta.com/talinn-gaming-summit-2022">
-            {text[9] || "Buy a ticket"}
-          </a>
+          {!session && (
+            <Link href="auth/registration">
+              <a>
+                Registration
+                <Image src={arrowUpRight as string} />
+              </a>
+            </Link>
+          )}
+          {session ? (
+            <button type="button" onClick={() => setSession(false)}>
+              Log out
+            </button>
+          ) : (
+            <Link href="/auth/login">
+              <a>Sign in</a>
+            </Link>
+          )}
+
+          {!session && (
+            <Link href="/toolbox/profile">
+              <a>profile</a>
+            </Link>
+          )}
         </div>
         <div className={styles.support}>
           <h2>{text[70] || "CUSTOMER SUPPORT"}</h2>

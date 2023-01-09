@@ -65,13 +65,13 @@ const Navbar: React.FC<INavbar> = ({ label }) => {
       outerHref: "/news",
       isHover: false,
     },
-    {
-      id: 6,
-      title: "Login",
-      href: "#login",
-      outerHref: "/auth/login",
-      isHover: false,
-    },
+    // {
+    //   id: 6,
+    //   title: "Login",
+    //   href: "#login",
+    //   outerHref: "/auth/login",
+    //   isHover: false,
+    // },
   ];
 
   const langLabel: ILabel[] = [
@@ -117,7 +117,12 @@ const Navbar: React.FC<INavbar> = ({ label }) => {
     <header className={styles.navbar}>
       {isOpen && (
         <div className={styles.mobil_menu}>
-          <MobilMenu navItem={navItem} onClose={onClose} />
+          <MobilMenu
+            navItem={navItem}
+            onClose={onClose}
+            session={session}
+            setSession={setSession}
+          />
         </div>
       )}
       <div className={styles.menu} onClick={() => setIsOpen(true)}>
@@ -141,29 +146,31 @@ const Navbar: React.FC<INavbar> = ({ label }) => {
         ))}
       </div>
       <div className={styles.right}>
-        {!session && (
-          <Link href="auth/registration">
-            <a>
-              Registration
-              <Image src={arrowUpRight as string} />
-            </a>
-          </Link>
-        )}
-        {session ? (
-          <button type="button" onClick={() => setSession(false)}>
-            Log out
-          </button>
-        ) : (
-          <Link href="/auth/login">
-            <a>Sign in</a>
-          </Link>
-        )}
+        <div className={styles.buttons_block}>
+          {!session && (
+            <Link href="auth/registration">
+              <a>
+                Registration
+                <Image src={arrowUpRight as string} />
+              </a>
+            </Link>
+          )}
+          {session ? (
+            <button type="button" onClick={() => setSession(false)}>
+              Log out
+            </button>
+          ) : (
+            <Link href="/auth/login">
+              <a>Sign in</a>
+            </Link>
+          )}
 
-        {!session && (
-          <Link href="/toolbox/profile">
-            <a>profile</a>
-          </Link>
-        )}
+          {!session && (
+            <Link href="/toolbox/profile">
+              <a>profile</a>
+            </Link>
+          )}
+        </div>
 
         {/* {session?.user?.name === "Alex" && <Link href="/api/auth/signin"> */}
         {/*  <a> */}

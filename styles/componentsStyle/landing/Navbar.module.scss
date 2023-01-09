@@ -90,6 +90,10 @@
     @include display-flex(flex-start);
     position: relative;
 
+    & .buttons_block {
+      @include display-flex(flex-start);
+    }
+
     & a,
     button {
       //width: 154px;
@@ -225,6 +229,10 @@
 
     & .right {
       @include display-flex(flex-start);
+
+      & .buttons_block {
+        display: none;
+      }
 
       & a,
       button {

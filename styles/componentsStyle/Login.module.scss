@@ -13,6 +13,26 @@
   overflow: hidden;
   padding: 352px 0 53px;
 
+  & .back {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 44px;
+    height: 44px;
+    background: #2c326f;
+    border-radius: 12px;
+    @include display-flex;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+
+    & svg {
+      color: white;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
   @media screen and (min-width: 500px) {
     @include display-flex;
   }

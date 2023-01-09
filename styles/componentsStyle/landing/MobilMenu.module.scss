@@ -201,6 +201,7 @@
 
     & .ticket {
       @include display-flex(space-between);
+      gap: 8px;
 
       & h2 {
         width: 174px;

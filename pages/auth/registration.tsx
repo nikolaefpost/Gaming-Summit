@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { AiOutlineCheck } from "react-icons/ai";
+import { HiArrowNarrowLeft } from "react-icons/hi";
 import * as yup from "yup";
 
 import MailVerification from "@/../components/MailVerification";
@@ -65,6 +66,11 @@ const Registration: NextPage = () => {
         </div>
       )}
       <div className={styles.login}>
+        <Link href="/">
+          <a className={styles.back} type="button">
+            <HiArrowNarrowLeft />
+          </a>
+        </Link>
         {!sendVerification && <div className={styles.background2} />}
         {sendVerification && !editPassword && (
           <div className={styles.background3} />

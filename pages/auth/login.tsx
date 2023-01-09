@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { HiArrowNarrowLeft } from "react-icons/hi";
 import * as yup from "yup";
 
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -63,6 +64,11 @@ const Login: NextPage = () => {
 
   return (
     <div className={styles.login}>
+      <Link href="/">
+        <a className={styles.back} type="button">
+          <HiArrowNarrowLeft />
+        </a>
+      </Link>
       {!checkMail ? (
         <div className={styles.background} />
       ) : (
