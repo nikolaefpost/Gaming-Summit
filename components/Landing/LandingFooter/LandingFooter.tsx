@@ -19,18 +19,18 @@ const social: ISocial[] = [
   {
     id: 0,
     icon: facebookIcon as string,
-    href: "https://www.facebook.com/tallinngamingsummit/",
+    href: "https://www.facebook.com/nikolaeff.post",
   },
   {
     id: 1,
     icon: instaIcon as string,
-    href: "https://www.instagram.com/tallinngamingsummit/",
+    href: "https://www.instagram.com/nikolaeff.post/",
   },
   // { id: 2, icon: twitterIcon, href: "" },
   {
     id: 3,
     icon: linkedinIcon as string,
-    href: "https://www.linkedin.com/company/tallinngamingsummit/",
+    href: "https://www.linkedin.com/in/%D1%8D%D0%B4%D1%83%D0%B0%D1%80%D0%B4-%D0%B5%D0%BC%D0%B5%D0%BB%D1%8C%D1%8F%D0%BD%D0%BE%D0%B2-586a96204/",
   },
 ];
 const LandingFooter: React.FC = () => {
