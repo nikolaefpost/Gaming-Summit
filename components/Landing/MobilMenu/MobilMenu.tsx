@@ -72,7 +72,7 @@ const MobilMenu: NextPage<IMobilMenu> = ({
         <div className={styles.links}>
           {navItem.map((item) => (
             <div key={item.id} className={styles.link}>
-              <a href={item.href} onClick={onClose}>
+              <a href={item.outerHref || item.href} onClick={onClose}>
                 {item.title}
               </a>
               <div
