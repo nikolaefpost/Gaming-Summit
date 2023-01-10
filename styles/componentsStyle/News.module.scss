@@ -173,21 +173,23 @@
           column-gap: 25px;
           row-gap: 15px;
           flex-wrap: wrap;
+          position: relative;
+          z-index: 10;
 
           & .card {
             width: 443px;
-            height: 570px;
+            height: 720px;
 
             & .photo {
               width: 100%;
-              height: 283px;
+              height: 483px;
               background-size: cover;
             }
 
             & .text {
               width: 100%;
-              height: 287px;
-              padding: 27px 22px 30px;
+              height: 237px;
+              padding: 16px 22px;
               background: #2c326f;
               box-shadow: 0 4px 40px rgba(43, 89, 255, 0.08);
 
@@ -207,7 +209,7 @@
               }
 
               & h2 {
-                margin-top: 20px;
+                margin-top: 10px;
                 @include fonts(500, 20px, 26px, white);
                 height: 52px;
                 overflow: hidden;
@@ -234,7 +236,7 @@
               }
 
               & .read_more {
-                margin-top: 26px;
+                margin-top: 6px;
                 @include fonts(500, 16px, 24px, $hot_pink);
                 @include display-flex(flex-start);
 
@@ -250,19 +252,24 @@
 
           & .single_card {
             width: 100%;
+            box-shadow: 0 4px 40px rgba(43, 89, 255, 0.08);
 
             & .photo_new {
               width: 100%;
               height: 487px;
-              background-size: cover;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-color: #2c326f;
+              border-radius: 10px 10px 0 0;
             }
 
             & .text_new {
               width: 100%;
               padding: 31px 50px 58px;
               background: #2c326f;
-              box-shadow: 0 4px 40px rgba(43, 89, 255, 0.08);
-              border-radius: 10px;
+
+              border-radius: 0 0 10px 10px;
 
               & .date {
                 @include display-flex(flex-start);

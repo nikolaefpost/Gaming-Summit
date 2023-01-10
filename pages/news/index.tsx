@@ -21,7 +21,7 @@ interface IBlog {
 
 const News: NextPage<IBlog> = ({ blogs }) => {
   const isMobile = useMediaQuery(500);
-  const visibleItems = isMobile ? 1 : 6;
+  const visibleItems = isMobile ? 1 : 4;
   const [shiftIndex, setShiftIndex] = useState<number>(0);
   const [slides, setSlides] = useState<INewArticle[]>(
     blogs.slice(0, visibleItems),
