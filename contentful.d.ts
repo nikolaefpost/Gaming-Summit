@@ -3,79 +3,14 @@ import { Asset, Entry } from "contentful";
 
 import { Document } from "@contentful/rich-text-types";
 
-export interface IArticleFields {
-  /** Internal Name */
-  internalName: string;
-
-  /** Title */
-  title: string;
-
-  /** Slug */
-  slug: string;
-
-  /** Body */
-  body: IComponentText[];
-
-  /** Related Pages */
-  relatedPages?: IArticle[] | undefined;
-
-  /** SEO Metadata */
-  seo?: ISeoMetadata | undefined;
-}
-
-export interface IArticle extends Entry<IArticleFields> {
-  sys: {
-    id: string;
-    type: string;
-    createdAt: string;
-    updatedAt: string;
-    locale: string;
-    contentType: {
-      sys: {
-        id: "article";
-        linkType: "ContentType";
-        type: "Link";
-      };
-    };
-  };
-}
-
-export interface IComponentTextFields {
-  /** Title */
-  title?: string | undefined;
-
-  /** Text */
-  text: Document;
-}
-
-export interface IComponentText extends Entry<IComponentTextFields> {
-  sys: {
-    id: string;
-    type: string;
-    createdAt: string;
-    updatedAt: string;
-    locale: string;
-    contentType: {
-      sys: {
-        id: "componentText";
-        linkType: "ContentType";
-        type: "Link";
-      };
-    };
-  };
-}
-
 export interface ILatestBlogFields {
   /** Title */
   title?: string | undefined;
 
-  /** Est Title */
-  estTitle?: string | undefined;
-
-  /** Main photo */
+  /** Main Photo */
   mainPhoto?: Asset | undefined;
 
-  /** resource link */
+  /** Resource Link */
   resourceLink?: string | undefined;
 }
 
@@ -98,30 +33,21 @@ export interface ILatestBlog extends Entry<ILatestBlogFields> {
 
 export interface INewArticleFields {
   /** Topic */
-  topic: string;
-
-  /** Est Topic */
-  estTopic?: string | undefined;
+  topic?: string | undefined;
 
   /** Announcement */
   content?: string | undefined;
 
-  /** Est Announcement */
-  estContent?: string | undefined;
-
   /** Formating text */
   formatingText?: Document | undefined;
-
-  /** Est Formating text */
-  estFormatingText?: Document | undefined;
 
   /** slug */
   slug?: string | undefined;
 
-  /** news_image */
+  /** News Image */
   newsImage?: Asset | undefined;
 
-  /** publication date */
+  /** Publication Date */
   publicationDate?: string | undefined;
 }
 
@@ -142,49 +68,7 @@ export interface INewArticle extends Entry<INewArticleFields> {
   };
 }
 
-export interface ISeoMetadataFields {
-  /** Internal Name */
-  name: string;
-
-  /** SEO Title */
-  seoTitle?: string | undefined;
-
-  /** Description */
-  description?: string | undefined;
-
-  /** Keywords */
-  keywords?: string[] | undefined;
-
-  /** Hide page from search engines (noindex) */
-  no_index?: boolean | undefined;
-
-  /** Exclude links from search rankings? (nofollow) */
-  no_follow?: boolean | undefined;
-}
-
-export interface ISeoMetadata extends Entry<ISeoMetadataFields> {
-  sys: {
-    id: string;
-    type: string;
-    createdAt: string;
-    updatedAt: string;
-    locale: string;
-    contentType: {
-      sys: {
-        id: "seoMetadata";
-        linkType: "ContentType";
-        type: "Link";
-      };
-    };
-  };
-}
-
-export type CONTENT_TYPE =
-  | "article"
-  | "componentText"
-  | "latestBlog"
-  | "newArticle"
-  | "seoMetadata";
+export type CONTENT_TYPE = "latestBlog" | "newArticle";
 
 export type LOCALE_CODE = "en-US";
 

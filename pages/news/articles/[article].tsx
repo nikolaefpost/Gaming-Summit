@@ -34,11 +34,7 @@ const Article: NextPage<IArticle> = ({ data }) => {
   return (
     <>
       <Head>
-        <title>
-          {lang !== "Eng" && data.fields.estTopic
-            ? data.fields.estTopic
-            : data.fields.topic}
-        </title>
+        <title>{data.fields.topic}</title>
       </Head>
       <div className={styles.wrapper}>
         <div className={styles.left_red_spots} />
@@ -89,11 +85,7 @@ const Article: NextPage<IArticle> = ({ data }) => {
                     <div className={styles.rich_text}>
                       {data.fields.formatingText && (
                         <div className={styles.rich_text}>
-                          {documentToReactComponents(
-                            lang !== "Eng" && data.fields.estFormatingText
-                              ? data.fields.estFormatingText
-                              : data.fields.formatingText,
-                          )}
+                          {documentToReactComponents(data.fields.formatingText)}
                         </div>
                       )}
                     </div>

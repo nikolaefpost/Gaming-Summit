@@ -48,7 +48,7 @@ const Home: NextPage<IHome> = ({ blogs }) => {
       <ProgramRoom />
       <Speakers />
       <Tickets />
-      <LatestBlog blogs={undefined} />
+      <LatestBlog blogs={blogs} />
       <Remember />
       <PlacePartners />
       <LandingFooter />

@@ -42,17 +42,9 @@ const NewsSlider: React.FC<INewsSlider> = ({ slides }) => {
                 )}
               </span>
             </div>
-            <h2>
-              {lang !== "Eng" && item.fields.estTopic
-                ? item.fields.estTopic
-                : item.fields.topic}
-            </h2>
+            <h2>{item.fields.topic}</h2>
             <div className={styles.short}>
-              <p>
-                {lang !== "Eng" && item.fields.estContent
-                  ? item.fields.estContent
-                  : item.fields.content}
-              </p>
+              <p>{item.fields.content}</p>
             </div>
             <Link href={`/news/articles/${item.fields.slug as string}`}>
               <a className={styles.read_more}>

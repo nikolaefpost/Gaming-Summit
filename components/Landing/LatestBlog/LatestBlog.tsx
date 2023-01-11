@@ -90,11 +90,7 @@ const LatestBlog: React.FC<IBlog> = ({ blogs }) => {
                   </div>
                 )}
               </div>
-              <p className={styles.text}>
-                {lang !== "Eng" && item.fields.estTitle
-                  ? item.fields.estTitle
-                  : item.fields.title}
-              </p>
+              <p className={styles.text}>{item.fields.title}</p>
             </a>
           ))}
         </div>
