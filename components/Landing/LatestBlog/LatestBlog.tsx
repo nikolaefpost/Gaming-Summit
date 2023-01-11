@@ -12,8 +12,7 @@ interface IBlog {
 }
 
 const LatestBlog: React.FC<IBlog> = ({ blogs }) => {
-  console.log(blogs);
-  const { lang, text } = useLanguage();
+  const { text } = useLanguage();
   let screenWidth: number;
   if (typeof window !== "undefined") {
     screenWidth = window.screen.width;
