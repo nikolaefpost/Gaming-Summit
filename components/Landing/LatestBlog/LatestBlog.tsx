@@ -12,6 +12,8 @@ interface IBlog {
 }
 
 const LatestBlog: React.FC<IBlog> = ({ blogs }) => {
+
+  console.log(blogs)
   const { lang, text } = useLanguage();
   let screenWidth: number;
   if (typeof window !== "undefined") {
@@ -78,7 +80,7 @@ const LatestBlog: React.FC<IBlog> = ({ blogs }) => {
               <div className={styles.photo_desktop}>
                 {item.fields.mainPhoto ? (
                   <Image
-                    src={`https://${item.fields.mainPhoto.fields.file.url}`}
+                    src={`https:${item.fields.mainPhoto.fields.file.url}`}
                     width={363}
                     height={530}
                     objectFit="cover"
