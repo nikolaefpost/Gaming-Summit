@@ -29,7 +29,7 @@ interface IArticle {
 
 const Article: NextPage<IArticle> = ({ data }) => {
   const label = "news";
-  const { lang, text } = useLanguage();
+  const { text } = useLanguage();
   const isMobile = useMediaQuery(500);
   return (
     <>
