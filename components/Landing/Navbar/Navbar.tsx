@@ -148,7 +148,7 @@ const Navbar: React.FC<INavbar> = ({ label }) => {
       <div className={styles.right}>
         <div className={styles.buttons_block}>
           {!session && (
-            <Link href="auth/registration">
+            <Link href="/auth/registration">
               <a>
                 Registration
                 <Image src={arrowUpRight as string} />
